@@ -8,6 +8,11 @@
 </head>
 <body>
 
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img id="modalImg" src="">
+    </div>
+
     <header>
         <h1>Gravírpont</h1>
     </header>
@@ -15,18 +20,7 @@
     <main>
         <section class="hero">
             <h2>Szeretsz egyedi ajándékot adni?</h2>
-            <p>Gravírozással és szublimációval készítek személyre szabott termékeket, legyen szó ajándékról, céges feliratozásról vagy emléktárgyról. Minden darab egyedi, ahogy az ötlet is.</p>
-        </section>
-
-        <section class="services">
-            <div class="service-card">
-                <h3>Lézergravírozás</h3>
-                <p>Precíz és örök érvényű jelölés fára, fémre, üvegre vagy műanyagra.</p>
-            </div>
-            <div class="service-card">
-                <h3>Szublimáció</h3>
-                <p>Színpompás, tartós nyomatok bögrékre, pólókra.</p>
-            </div>
+            <p>Személyre szabott termékek, ahogy az ötlet is.</p>
         </section>
 
         <section class="products">
@@ -34,10 +28,10 @@
             <div class="product-grid">
                 
                 <div class="product-card">
-                    <img src="karkoto.jpg" id="main-img-1" alt="Születési karkötő tartó" class="product-image-main">
+                    <img src="karkoto.jpg" id="img-1" class="product-image-main" onclick="openModal(this.src)">
                     <div class="product-gallery">
-                        <img src="karkoto.jpg" alt="Kép 1" onclick="changeImage('main-img-1', 'karkoto.jpg')">
-                        <img src="karkoto2.jpg" alt="Kép 2" onclick="changeImage('main-img-1', 'karkoto2.jpg')">
+                        <img src="karkoto.jpg" onclick="changeImage('img-1', 'karkoto.jpg')">
+                        <img src="karkoto2.jpg" onclick="changeImage('img-1', 'karkoto2.jpg')">
                     </div>
                     <h3>Születési karkötő tartó</h3>
                     <p class="price">4.500 Ft</p>
@@ -45,14 +39,15 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="koszonto.jpg" id="main-img-2" alt="Esküvői köszönőajándék" class="product-image-main">
+                    <img src="koszonto.jpg" id="img-2" class="product-image-main" onclick="openModal(this.src)">
                     <div class="product-gallery">
-                        <img src="koszonto.jpg" alt="Kép 1" onclick="changeImage('main-img-2', 'koszonto.jpg')">
-                        <img src="koszonto2.jpg" alt="Kép 2" onclick="changeImage('main-img-2', 'koszonto2.jpg')">
-                        <img src="koszonto3.jpg" alt="Kép 3" onclick="changeImage('main-img-2', 'koszonto3.jpg')">
+                        <img src="koszonto.jpg" onclick="changeImage('img-2', 'koszonto.jpg')">
+                        <img src="koszonto2.jpg" onclick="changeImage('img-2', 'koszonto2.jpg')">
+                        <img src="koszonto3.jpg" onclick="changeImage('img-2', 'koszonto3.jpg')">
                     </div>
                     <h3>Esküvői köszönőajándék</h3>
-                    <p class="price">Kérjen árat</p> <button class="buy-button">Érdeklődöm</button>
+                    <p class="price">Kérjen árat</p>
+                    <button class="buy-button">Érdeklődöm</button>
                 </div>
 
             </div>
@@ -60,8 +55,28 @@
     </main>
 
     <script>
+        // Képváltó a kártyán belül
         function changeImage(imgId, fileName) {
             document.getElementById(imgId).src = fileName;
+        }
+
+        // Nagyítás megnyitása
+        function openModal(src) {
+            document.getElementById("imageModal").style.display = "flex";
+            document.getElementById("modalImg").src = src;
+        }
+
+        // Nagyítás bezárása
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        // Bezárás a kép mellé kattintva is
+        window.onclick = function(event) {
+            let modal = document.getElementById("imageModal");
+            if (event.target == modal) {
+                closeModal();
+            }
         }
     </script>
 
