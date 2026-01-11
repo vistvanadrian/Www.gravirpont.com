@@ -44,3 +44,26 @@ header h1 {
     font-size: 1.2rem;
     opacity: 0.9;
 }
+/* Szolgáltatások elrendezése - egymás mellé teszi a dobozokat */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
+}
+
+/* Egy-egy kártya (doboz) stílusa */
+.service-card {
+    background-color: #2a2a2a; 
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.service-card h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
