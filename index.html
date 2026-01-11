@@ -21,35 +21,38 @@
         <section class="services">
             <div class="service-card">
                 <h3>Lézergravírozás</h3>
-                <p>Precíz és örök érvényű jelölés fára, fémre, üvegre vagy műanyagra. Ideális egyedi feliratokhoz és logózáshoz.</p>
+                <p>Precíz és örök érvényű jelölés fára, fémre, üvegre vagy műanyagra.</p>
             </div>
-
             <div class="service-card">
                 <h3>Szublimáció</h3>
-                <p>Színpompás, tartós nyomatok bögrékre, pólókra és egyéb ajándéktárgyakra. Fotóminőségű megjelenítés, ami nem kopik le.</p>
+                <p>Színpompás, tartós nyomatok bögrékre, pólókra.</p>
             </div>
         </section>
 
         <section class="products">
             <h2>Kiemelt termékeink</h2>
             <div class="product-grid">
-                
                 <div class="product-card">
-                    <img src="karkoto.jpg" alt="Születési karkötő tartó" class="product-image-main">
+                    <img src="karkoto.jpg" id="main-img" alt="Születési karkötő tartó" class="product-image-main">
                     
                     <div class="product-gallery">
-                        <img src="karkoto.jpg" alt="Kép 1">
-                        <img src="karkoto2.jpg" alt="Kép 2">
+                        <img src="karkoto.jpg" alt="Kép 1" onclick="changeImage('karkoto.jpg')">
+                        <img src="karkoto2.jpg" alt="Kép 2" onclick="changeImage('karkoto2.jpg')">
                     </div>
                     
                     <h3>Születési karkötő tartó</h3>
                     <p class="price">4.500 Ft</p>
                     <button class="buy-button">Érdeklődöm</button>
                 </div>
-
             </div>
         </section>
     </main>
+
+    <script>
+        function changeImage(fileName) {
+            document.getElementById('main-img').src = fileName;
+        }
+    </script>
 
 </body>
 </html>
