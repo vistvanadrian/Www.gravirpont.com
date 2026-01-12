@@ -19,7 +19,7 @@
             <span class="close-modal" onclick="closeOrder()">&times;</span>
             <h2 style="color: #d4af37; text-align: center;">Megrendelés</h2>
             
-            <form action="https://formspree.io/f/meeeqoyj" method="POST" enctype="multipart/form-data" class="order-form">
+            <form action="https://formspree.io/f/meeeqoyj" method="POST" class="order-form">
                 
                 <label>Választott termék:</label>
                 <select name="termek" id="productSelect" required>
@@ -36,8 +36,9 @@
                 
                 <textarea name="message" rows="3" placeholder="Üzenet, felirat vagy egyéb kérés..."></textarea>
 
-                <label>Fénykép feltöltése (opcionális):</label>
-                <input type="file" name="upload" accept="image/*">
+                <p style="font-size: 0.8rem; color: #d4af37; background: #333; padding: 10px; border-radius: 5px; margin: 10px 0;">
+                    📸 <strong>Fényképküldés:</strong> A kiválasztott fotót a megrendelés elküldése után, az adategyeztetés során e-mailben vagy Messengeren tudja majd elküldeni nekem.
+                </p>
 
                 <div style="display: flex; align-items: flex-start; gap: 10px; margin-top: 10px; text-align: left;">
                     <input type="checkbox" id="terms" style="width: 25px; height: 25px; cursor: pointer;" onchange="toggleButton()">
@@ -60,43 +61,28 @@
     <main>
         <section class="hero">
             <h2>Egyedi ajándékok, örök emlékek</h2>
-            <p>Személyre szabott termékek készítése szublimációval és lézergravírozással.</p>
+            <p>Személyre szabott termékek készítése szublimációval és lézergravírozással Polgáron.</p>
         </section>
 
         <section class="products">
             <div class="product-grid">
                 <div class="product-card">
                     <img src="kepek/karkoto.jpg" id="img-1" class="product-image-main" onclick="openModal(this.src)">
-                    <div class="product-gallery">
-                        <img src="kepek/karkoto.jpg" onclick="changeImage('img-1', 'kepek/karkoto.jpg')">
-                        <img src="kepek/karkoto2.jpg" onclick="changeImage('img-1', 'kepek/karkoto2.jpg')">
-                    </div>
                     <h3>Születési karkötő tartó</h3>
-                    <p class="description">Egyedi névvel és adatokkal gravírozott tartó.</p>
                     <p class="price">4.500 Ft</p>
                     <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
                 </div>
 
                 <div class="product-card">
                     <img src="kepek/koszonto.jpg" id="img-2" class="product-image-main" onclick="openModal(this.src)">
-                    <div class="product-gallery">
-                        <img src="kepek/koszonto.jpg" onclick="changeImage('img-2', 'kepek/koszonto.jpg')">
-                        <img src="kepek/koszonto2.jpg" onclick="changeImage('img-2', 'kepek/koszonto2.jpg')">
-                    </div>
                     <h3>Esküvői köszönőajándék</h3>
-                    <p class="description">Egyedi emlék a nagy napról.</p>
                     <p class="price">Kérjen árat</p>
                     <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
                 </div>
 
                 <div class="product-card">
                     <img src="kepek/ko1.jpg" id="img-3" class="product-image-main" onclick="openModal(this.src)">
-                    <div class="product-gallery">
-                        <img src="kepek/ko1.jpg" onclick="changeImage('img-3', 'kepek/ko1.jpg')">
-                        <img src="kepek/ko2.jpg" onclick="changeImage('img-3', 'kepek/ko2.jpg')">
-                    </div>
                     <h3>Egyedi Fotókő</h3>
-                    <p class="description">Saját fotóval ellátott természetes palakő.</p>
                     <p class="price">5.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('fotoko')">Megrendelem</button>
                 </div>
@@ -107,7 +93,7 @@
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('led-lampa')">Megrendelem</button>
                 </div>
-                
+
                 <div class="product-card">
                     <img src="kepek/szarvas.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)">
                     <h3>Rénszarvasos LED lámpa</h3>
@@ -131,23 +117,11 @@
     </footer>
 
     <script>
-        function changeImage(imgId, fileName) {
-            document.getElementById(imgId).src = fileName;
-        }
-        function openModal(src) {
-            document.getElementById("imageModal").style.display = "flex";
-            document.getElementById("modalImg").src = src;
-        }
-        function closeModal() {
-            document.getElementById("imageModal").style.display = "none";
-        }
-        function openOrder(productValue) {
-            document.getElementById("orderModal").style.display = "flex";
-            document.getElementById("productSelect").value = productValue;
-        }
-        function closeOrder() {
-            document.getElementById("orderModal").style.display = "none";
-        }
+        function changeImage(imgId, fileName) { document.getElementById(imgId).src = fileName; }
+        function openModal(src) { document.getElementById("imageModal").style.display = "flex"; document.getElementById("modalImg").src = src; }
+        function closeModal() { document.getElementById("imageModal").style.display = "none"; }
+        function openOrder(productValue) { document.getElementById("orderModal").style.display = "flex"; document.getElementById("productSelect").value = productValue; }
+        function closeOrder() { document.getElementById("orderModal").style.display = "none"; }
         function toggleButton() {
             const checkbox = document.getElementById('terms');
             const button = document.getElementById('submitBtn');
