@@ -21,21 +21,12 @@
             
             <form action="https://formspree.io/f/meeeqoyj" method="POST" enctype="multipart/form-data" class="order-form">
                 <label>Választott termék:</label>
-               <div class="product-card">
-    <img src="kepek/szarvas.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)">
-    <div class="product-gallery">
-        <img src="kepek/szarvas.jpg" onclick="changeImage('img-5', 'kepek/szarvas.jpg')">
-        <img src="kepek/szarvas1.jpg" onclick="changeImage('img-5', 'kepek/szarvas1.jpg')">
-        <img src="kepek/szarvas2.jpg" onclick="changeImage('img-5', 'kepek/szarvas2.jpg')">
-    </div>
-    <h3>Rénszarvasos LED lámpa</h3>
-    <p class="description">
-        Egyedi, ünnepi hangulatú rénszarvasos lámpa.<br>
-        Modern LED technológia, háromféle választható fénnyel. Tökéletes karácsonyi dekoráció vagy ajándék.
-    </p>
-    <p class="price">4.900 Ft</p>
-    <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
-</div>
+                <select name="termek" id="productSelect" required>
+                    <option value="karkoto-tarto">Születési karkötő tartó</option>
+                    <option value="koszonto-ajandek">Esküvői köszönőajándék</option>
+                    <option value="fotoko">Egyedi Fotókő</option>
+                    <option value="led-lampa">Led lámpa (Grinch)</option>
+                    <option value="szarvas-lampa">Rénszarvasos LED lámpa</option>
                 </select>
 
                 <input type="text" name="nev" placeholder="Az Ön neve" required>
@@ -78,21 +69,21 @@
                 </div>
 
                 <div class="product-card">
-    <img src="kepek/koszonto.jpg" id="img-2" class="product-image-main" onclick="openModal(this.src)">
-    <div class="product-gallery">
-        <img src="kepek/koszonto.jpg" onclick="changeImage('img-2', 'kepek/koszonto.jpg')">
-        <img src="kepek/koszonto2.jpg" onclick="changeImage('img-2', 'kepek/koszonto2.jpg')">
-        <img src="kepek/koszonto3.jpg" onclick="changeImage('img-2', 'kepek/koszonto3.jpg')">
-    </div>
-    <h3>Esküvői köszönőajándék</h3>
-    <p class="description">
-        <strong>Esküvői köszönő ajándék – személyre szabott emlék</strong><br>
-        Elegáns és figyelmes apróság a nagy napról. Egyedileg személyre szabható névvel, dátummal vagy üzenettel.<br>
-        🎁 Ideális választás, amely maradandó emlék a vendégeknek.
-    </p>
-    <p class="price">Kérjen árat</p>
-    <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
-</div>
+                    <img src="kepek/koszonto.jpg" id="img-2" class="product-image-main" onclick="openModal(this.src)">
+                    <div class="product-gallery">
+                        <img src="kepek/koszonto.jpg" onclick="changeImage('img-2', 'kepek/koszonto.jpg')">
+                        <img src="kepek/koszonto2.jpg" onclick="changeImage('img-2', 'kepek/koszonto2.jpg')">
+                        <img src="kepek/koszonto3.jpg" onclick="changeImage('img-2', 'kepek/koszonto3.jpg')">
+                    </div>
+                    <h3>Esküvői köszönőajándék</h3>
+                    <p class="description">
+                        <strong>Esküvői köszönő ajándék – személyre szabott emlék</strong><br>
+                        Elegáns és figyelmes apróság a nagy napról. Egyedileg személyre szabható névvel, dátummal vagy üzenettel.<br>
+                        🎁 Ideális választás, amely maradandó emlék a vendégeknek.
+                    </p>
+                    <p class="price">Kérjen árat</p>
+                    <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
+                </div>
 
                 <div class="product-card">
                     <img src="kepek/ko1.jpg" id="img-3" class="product-image-main" onclick="openModal(this.src)">
@@ -110,39 +101,41 @@
                 </div>
 
                 <div class="product-card">
-    <img src="kepek/grinch.jpg" id="img-4" class="product-image-main" onclick="openModal(this.src)">
-    <div class="product-gallery">
-        <img src="kepek/grinch.jpg" onclick="changeImage('img-4', 'kepek/grinch.jpg')">
-        <img src="kepek/grinch1.jpg" onclick="changeImage('img-4', 'kepek/grinch1.jpg')">
-        <img src="kepek/grinch2.jpg" onclick="changeImage('img-4', 'kepek/grinch2.jpg')">
-    </div>
-    <h3>Led lámpa</h3>
-    <p class="description">
-        <strong>💡 LED lámpa – háromféle fény, egyedi hangulat</strong><br>
-        Modern, energiatakarékos dekoráció, amely minden otthonba illik:<br>
-        • 🌈 Színes fény – hangulatvilágításhoz<br>
-        • 🌤 Természetes fehér – mindennapi használatra<br>
-        • ❄️ Hideg fehér – erős, tiszta fény<br>
-        Alacsony fogyasztás, hosszú élettartam.
-    </p>
-    <p class="price">4.900 Ft</p>
-    <button class="buy-button" onclick="openOrder('led-lampa')">Megrendelem</button>
-</div>
-<div class="product-card">
-    <img src="kepek/szarvas.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)">
-    <div class="product-gallery">
-        <img src="kepek/szarvas.jpg" onclick="changeImage('img-5', 'kepek/szarvas.jpg')">
-        <img src="kepek/szarvas1.jpg" onclick="changeImage('img-5', 'kepek/szarvas1.jpg')">
-        <img src="kepek/szarvas2.jpg" onclick="changeImage('img-5', 'kepek/szarvas2.jpg')">
-    </div>
-    <h3>Rénszarvasos LED lámpa</h3>
-    <p class="description">
-        Egyedi, ünnepi hangulatú rénszarvasos lámpa.<br>
-        Modern LED technológia, háromféle választható fénnyel. Tökéletes karácsonyi dekoráció vagy ajándék.
-    </p>
-    <p class="price">4.900 Ft</p>
-    <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
-</div>
+                    <img src="kepek/grinch.jpg" id="img-4" class="product-image-main" onclick="openModal(this.src)">
+                    <div class="product-gallery">
+                        <img src="kepek/grinch.jpg" onclick="changeImage('img-4', 'kepek/grinch.jpg')">
+                        <img src="kepek/grinch1.jpg" onclick="changeImage('img-4', 'kepek/grinch1.jpg')">
+                        <img src="kepek/grinch2.jpg" onclick="changeImage('img-4', 'kepek/grinch2.jpg')">
+                    </div>
+                    <h3>Led lámpa</h3>
+                    <p class="description">
+                        <strong>💡 LED lámpa – háromféle fény, egyedi hangulat</strong><br>
+                        Modern, energiatakarékos dekoráció, amely minden otthonba illik:<br>
+                        • 🌈 Színes fény – hangulatvilágításhoz<br>
+                        • 🌤 Természetes fehér – mindennapi használatra<br>
+                        • ❄️ Hideg fehér – erős, tiszta fény<br>
+                        Alacsony fogyasztás, hosszú élettartam.
+                    </p>
+                    <p class="price">4.900 Ft</p>
+                    <button class="buy-button" onclick="openOrder('led-lampa')">Megrendelem</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="kepek/szarvas.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)">
+                    <div class="product-gallery">
+                        <img src="kepek/szarvas.jpg" onclick="changeImage('img-5', 'kepek/szarvas.jpg')">
+                        <img src="kepek/szarvas1.jpg" onclick="changeImage('img-5', 'kepek/szarvas1.jpg')">
+                        <img src="kepek/szarvas2.jpg" onclick="changeImage('img-5', 'kepek/szarvas2.jpg')">
+                    </div>
+                    <h3>Rénszarvasos LED lámpa</h3>
+                    <p class="description">
+                        Egyedi, ünnepi hangulatú rénszarvasos lámpa.<br>
+                        Modern LED technológia, háromféle választható fénnyel. Tökéletes karácsonyi dekoráció vagy ajándék.
+                    </p>
+                    <p class="price">4.900 Ft</p>
+                    <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
+                </div>
+
             </div>
         </section>
     </main>
