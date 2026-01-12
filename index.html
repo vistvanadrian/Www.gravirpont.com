@@ -25,6 +25,7 @@
                     <option value="karkoto-tarto">Születési karkötő tartó</option>
                     <option value="koszonto-ajandek">Esküvői köszönőajándék</option>
                     <option value="fotoko">Egyedi Fotókő</option>
+                    <option value="led-lampa">Led lámpa (Grinch)</option>
                 </select>
 
                 <input type="text" name="nev" placeholder="Az Ön neve" required>
@@ -93,59 +94,35 @@
                     <p class="price">5.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('fotoko')">Megrendelem</button>
                 </div>
-<div class="product-card">
 
-    <img src="kepek/grinch.jpg" id="img-4" class="product-image-main" onclick="openModal(this.src)">
+                <div class="product-card">
+                    <img src="kepek/grinch.jpg" id="img-4" class="product-image-main" onclick="openModal(this.src)">
+                    <div class="product-gallery">
+                        <img src="kepek/grinch.jpg" onclick="changeImage('img-4', 'kepek/grinch.jpg')">
+                        <img src="kepek/grinch2.jpg" onclick="changeImage('img-4', 'kepek/grinch2.jpg')">
+                        <img src="kepek/grinch3.jpg" onclick="changeImage('img-4', 'kepek/grinch3.jpg')">
+                    </div>
+                    <h3>Led lámpa</h3>
+                    <p class="description">
+                        <strong>💡 LED lámpa – háromféle fény, egyedi hangulat</strong><br>
+                        Modern, energiatakarékos dekoráció, amely minden otthonba illik:<br>
+                        • 🌈 Színes fény – hangulatvilágításhoz<br>
+                        • 🌤 Természetes fehér – mindennapi használatra<br>
+                        • ❄️ Hideg fehér – erős, tiszta fény<br>
+                        Alacsony fogyasztás, hosszú élettartam.
+                    </p>
+                    <p class="price">4.900 Ft</p>
+                    <button class="buy-button" onclick="openOrder('led-lampa')">Megrendelem</button>
+                </div>
 
-    
-
-    <div class="product-gallery">
-<div class="product-gallery">
-    <img src="kepek/grinch.jpg" onclick="changeImage('img-4', 'kepek/grinch.jpg')">
-    <img src="kepek/grinch2.jpg" onclick="changeImage('img-4', 'kepek/grinch2.jpg')">
-    <img src="kepek/grinch3.jpg" onclick="changeImage('img-4', 'kepek/grinch3.jpg')">
-    </div>
-
-    
-
-    <h3>Led lámpa</h3>
-
-    <p class="description">💡 LED lámpa – háromféle fény, egyedi hangulat
-
-Modern, energiatakarékos LED lámpa, amely három színváltozatban elérhető:
-
-
-
-🌈 Színes fény – dekorációhoz, hangulatvilágításhoz
-
-🌤 Természetes fehér – kellemes, szemkímélő mindennapi használatra
-
-❄️ Hideg fehér – erős, tiszta fény munkához vagy kiemeléshez
-
-Letisztult kialakításának köszönhetően otthonba, irodába vagy ajándéknak is ideális választás.
-
-
-
-Alacsony fogyasztás, hosszú élettartam, megbízható LED technológia.</p>
-
-    <p class="price">4900 Ft</p>
-
-    
-
-    <button class="buy-button" onclick="openOrder('uj-termek')">Megrendelem</button>
-
-</div>
             </div>
         </section>
     </main>
 
     <script>
-        // Képváltó
         function changeImage(imgId, fileName) {
             document.getElementById(imgId).src = fileName;
         }
-
-        // Nagyítás megnyitása
         function openModal(src) {
             document.getElementById("imageModal").style.display = "flex";
             document.getElementById("modalImg").src = src;
@@ -153,8 +130,6 @@ Alacsony fogyasztás, hosszú élettartam, megbízható LED technológia.</p>
         function closeModal() {
             document.getElementById("imageModal").style.display = "none";
         }
-
-        // Megrendelő ablak megnyitása
         function openOrder(productValue) {
             document.getElementById("orderModal").style.display = "flex";
             document.getElementById("productSelect").value = productValue;
@@ -162,13 +137,10 @@ Alacsony fogyasztás, hosszú élettartam, megbízható LED technológia.</p>
         function closeOrder() {
             document.getElementById("orderModal").style.display = "none";
         }
-
-        // Bezárás ha mellé kattintunk
         window.onclick = function(event) {
             if (event.target.id === "imageModal") closeModal();
             if (event.target.id === "orderModal") closeOrder();
         }
     </script>
-
 </body>
 </html>
