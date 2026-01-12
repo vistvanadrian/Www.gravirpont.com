@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kreatívlenyomat - Egyedi Ajándékok és Fotókő</title>
-    <meta name="description" content="Egyedi fényképes ajándékok, fotókövek és gravírozott emlékek készítése szublimációval és lézerrel.">
+    <meta name="description" content="Egyedi fényképes ajándékok, fotókövek és gravírozott emlékek készítése.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +20,7 @@
             <h2 style="color: #d4af37; text-align: center;">Megrendelés</h2>
             
             <form action="https://formspree.io/f/meeeqoyj" method="POST" enctype="multipart/form-data" class="order-form">
+                
                 <label>Választott termék:</label>
                 <select name="termek" id="productSelect" required>
                     <option value="karkoto-tarto">Születési karkötő tartó</option>
@@ -31,12 +32,11 @@
                 </select>
 
                 <input type="text" name="nev" placeholder="Az Ön neve" required>
-                <input type="email" name="_replyto" placeholder="E-mail címe" required>
-                <input type="tel" name="telefon" placeholder="Telefonszáma">
+                <input type="email" name="_replyto" placeholder="Az Ön e-mail címe" required>
                 
-                <textarea name="uzenet" rows="3" placeholder="Egyedi felirat szövege, méretek vagy egyéb kérés..."></textarea>
-                
-                <label>Fénykép csatolása (ha szükséges):</label>
+                <textarea name="message" rows="3" placeholder="Üzenet, felirat vagy egyéb kérés..."></textarea>
+
+                <label>Fénykép feltöltése (opcionális):</label>
                 <input type="file" name="upload" accept="image/*">
 
                 <div style="display: flex; align-items: flex-start; gap: 10px; margin-top: 10px; text-align: left;">
@@ -60,12 +60,11 @@
     <main>
         <section class="hero">
             <h2>Egyedi ajándékok, örök emlékek</h2>
-            <p>Gravírozással és szublimációval készítek személyre szabott termékeket Polgáron és környékén.</p>
+            <p>Személyre szabott termékek készítése szublimációval és lézergravírozással.</p>
         </section>
 
         <section class="products">
             <div class="product-grid">
-                
                 <div class="product-card">
                     <img src="kepek/karkoto.jpg" id="img-1" class="product-image-main" onclick="openModal(this.src)">
                     <div class="product-gallery">
@@ -73,7 +72,7 @@
                         <img src="kepek/karkoto2.jpg" onclick="changeImage('img-1', 'kepek/karkoto2.jpg')">
                     </div>
                     <h3>Születési karkötő tartó</h3>
-                    <p class="description">Egyedi névvel és születési adatokkal gravírozott fa tartó az első emlékeknek.</p>
+                    <p class="description">Egyedi névvel és adatokkal gravírozott tartó.</p>
                     <p class="price">4.500 Ft</p>
                     <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
                 </div>
@@ -85,7 +84,7 @@
                         <img src="kepek/koszonto2.jpg" onclick="changeImage('img-2', 'kepek/koszonto2.jpg')">
                     </div>
                     <h3>Esküvői köszönőajándék</h3>
-                    <p class="description">Személyre szabott apróságok a vendégeknek a nagy napra.</p>
+                    <p class="description">Egyedi emlék a nagy napról.</p>
                     <p class="price">Kérjen árat</p>
                     <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
                 </div>
@@ -97,44 +96,31 @@
                         <img src="kepek/ko2.jpg" onclick="changeImage('img-3', 'kepek/ko2.jpg')">
                     </div>
                     <h3>Egyedi Fotókő</h3>
-                    <p class="description">Természetes palakőre szublimált fotó, rusztikus élekkel.</p>
+                    <p class="description">Saját fotóval ellátott természetes palakő.</p>
                     <p class="price">5.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('fotoko')">Megrendelem</button>
                 </div>
 
                 <div class="product-card">
                     <img src="kepek/grinch.jpg" id="img-4" class="product-image-main" onclick="openModal(this.src)">
-                    <div class="product-gallery">
-                        <img src="kepek/grinch.jpg" onclick="changeImage('img-4', 'kepek/grinch.jpg')">
-                    </div>
                     <h3>Led lámpa (Grinch)</h3>
-                    <p class="description">Egyedi hangulatvilágítás háromféle fénnyel.</p>
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('led-lampa')">Megrendelem</button>
                 </div>
-
+                
                 <div class="product-card">
                     <img src="kepek/szarvas.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)">
-                    <div class="product-gallery">
-                        <img src="kepek/szarvas.jpg" onclick="changeImage('img-5', 'kepek/szarvas.jpg')">
-                    </div>
                     <h3>Rénszarvasos LED lámpa</h3>
-                    <p class="description">Ünnepi dekoráció modern LED technológiával.</p>
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
                 </div>
 
                 <div class="product-card">
                     <img src="kepek/jutalom.jpg" id="img-6" class="product-image-main" onclick="openModal(this.src)">
-                    <div class="product-gallery">
-                        <img src="kepek/jutalom.jpg" onclick="changeImage('img-6', 'kepek/jutalom.jpg')">
-                    </div>
                     <h3>Jutalompont rendszer</h3>
-                    <p class="description">Játékos motiváció gyerekeknek a mindennapi feladatokhoz.</p>
                     <p class="price">Kérjen árat</p>
                     <button class="buy-button" onclick="openOrder('jutalompont')">Megrendelem</button>
                 </div>
-
             </div>
         </section>
     </main>
@@ -162,8 +148,6 @@
         function closeOrder() {
             document.getElementById("orderModal").style.display = "none";
         }
-        
-        // Jelölőnégyzet figyelése
         function toggleButton() {
             const checkbox = document.getElementById('terms');
             const button = document.getElementById('submitBtn');
@@ -171,7 +155,6 @@
             button.style.opacity = checkbox.checked ? "1" : "0.5";
             button.style.cursor = checkbox.checked ? "pointer" : "not-allowed";
         }
-
         window.onclick = function(event) {
             if (event.target.id === "imageModal") closeModal();
             if (event.target.id === "orderModal") closeOrder();
