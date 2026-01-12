@@ -21,11 +21,21 @@
             
             <form action="https://formspree.io/f/meeeqoyj" method="POST" enctype="multipart/form-data" class="order-form">
                 <label>Választott termék:</label>
-                <select name="termek" id="productSelect" required>
-                    <option value="karkoto-tarto">Születési karkötő tartó</option>
-                    <option value="koszonto-ajandek">Esküvői köszönőajándék</option>
-                    <option value="fotoko">Egyedi Fotókő</option>
-                    <option value="led-lampa">Led lámpa (Grinch)</option>
+               <div class="product-card">
+    <img src="kepek/szarvas.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)">
+    <div class="product-gallery">
+        <img src="kepek/szarvas.jpg" onclick="changeImage('img-5', 'kepek/szarvas.jpg')">
+        <img src="kepek/szarvas1.jpg" onclick="changeImage('img-5', 'kepek/szarvas1.jpg')">
+        <img src="kepek/szarvas2.jpg" onclick="changeImage('img-5', 'kepek/szarvas2.jpg')">
+    </div>
+    <h3>Rénszarvasos LED lámpa</h3>
+    <p class="description">
+        Egyedi, ünnepi hangulatú rénszarvasos lámpa.<br>
+        Modern LED technológia, háromféle választható fénnyel. Tökéletes karácsonyi dekoráció vagy ajándék.
+    </p>
+    <p class="price">4.900 Ft</p>
+    <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
+</div>
                 </select>
 
                 <input type="text" name="nev" placeholder="Az Ön neve" required>
