@@ -123,6 +123,14 @@ header h1 {
     font-weight: bold;
     cursor: pointer;
 }
+/* Leírás stílusa a termékkártyán belül */
+.description {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 10px 0;
+    padding: 0 5px;
+    min-height: 50px; /* Hogy egyforma magasak legyenek a dobozok */
+}
 
 /* NAGYÍTÁS (MODAL) STÍLUSA */
 .modal {
