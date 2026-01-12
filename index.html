@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kreatívlenyomat - Lézergravírozás és Szublimáció</title>
+    <title>Kreatívlenyomat - Egyedi Ajándékok és Fotókő</title>
+    <meta name="description" content="Egyedi fényképes ajándékok, fotókövek és gravírozott emlékek készítése szublimációval és lézerrel.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +18,6 @@
         <div class="order-content">
             <span class="close-modal" onclick="closeOrder()">&times;</span>
             <h2 style="color: #d4af37; text-align: center;">Megrendelés</h2>
-            <p style="text-align: center; font-size: 0.9rem; margin-bottom: 15px;">Töltse ki az adatokat, és hamarosan keresem!</p>
             
             <form action="https://formspree.io/f/meeeqoyj" method="POST" enctype="multipart/form-data" class="order-form">
                 <label>Választott termék:</label>
@@ -35,12 +34,21 @@
                 <input type="email" name="_replyto" placeholder="E-mail címe" required>
                 <input type="tel" name="telefon" placeholder="Telefonszáma">
                 
-                <textarea name="uzenet" rows="4" placeholder="Egyedi felirat szövege, méretek, vagy egyéb kérés..."></textarea>
+                <textarea name="uzenet" rows="3" placeholder="Egyedi felirat szövege, méretek vagy egyéb kérés..."></textarea>
                 
                 <label>Fénykép csatolása (ha szükséges):</label>
                 <input type="file" name="upload" accept="image/*">
 
-                <button type="submit" class="submit-button">Megrendelés elküldése</button>
+                <div style="display: flex; align-items: flex-start; gap: 10px; margin-top: 10px; text-align: left;">
+                    <input type="checkbox" id="terms" style="width: 25px; height: 25px; cursor: pointer;" onchange="toggleButton()">
+                    <label for="terms" style="font-size: 0.8rem; color: #ccc; cursor: pointer;">
+                        Elfogadom, hogy a rendelésem csak az adategyeztetés, valamint a termék és a szállítási költség rendezése után válik véglegessé.
+                    </label>
+                </div>
+
+                <button type="submit" id="submitBtn" class="submit-button" disabled style="opacity: 0.5; cursor: not-allowed;">
+                    Megrendelés elküldése
+                </button>
             </form>
         </div>
     </div>
@@ -51,8 +59,8 @@
 
     <main>
         <section class="hero">
-            <h2>Szeretsz egyedi ajándékot adni?</h2>
-            <p>Gravírozással és szublimációval készítek személyre szabott termékeket, legyen szó ajándékról, céges feliratozásról vagy emléktárgyról. Minden darab egyedi, ahogy az ötlet is.</p>
+            <h2>Egyedi ajándékok, örök emlékek</h2>
+            <p>Gravírozással és szublimációval készítek személyre szabott termékeket Polgáron és környékén.</p>
         </section>
 
         <section class="products">
@@ -65,13 +73,7 @@
                         <img src="kepek/karkoto2.jpg" onclick="changeImage('img-1', 'kepek/karkoto2.jpg')">
                     </div>
                     <h3>Születési karkötő tartó</h3>
-                    <p class="description">
-                        <strong>„Az első pillanat, amely örökre megmarad.”</strong> ✨<br><br>
-                        Ne hagyd a fiók mélyén a kórházi karkötőt! Ez a névre szóló tartó egy igazi időkapszula:<br>
-                        • ✨ <strong>Egyedi:</strong> Gravírozott név és adatok.<br>
-                        • 🎁 <strong>Tökéletes ajándék:</strong> Babalátogatóba vagy keresztelőre.<br>
-                        • ❤️ <strong>Örök emlék:</strong> Szülőknek és nagyszülőknek.
-                    </p>
+                    <p class="description">Egyedi névvel és születési adatokkal gravírozott fa tartó az első emlékeknek.</p>
                     <p class="price">4.500 Ft</p>
                     <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
                 </div>
@@ -81,14 +83,9 @@
                     <div class="product-gallery">
                         <img src="kepek/koszonto.jpg" onclick="changeImage('img-2', 'kepek/koszonto.jpg')">
                         <img src="kepek/koszonto2.jpg" onclick="changeImage('img-2', 'kepek/koszonto2.jpg')">
-                        <img src="kepek/koszonto3.jpg" onclick="changeImage('img-2', 'kepek/koszonto3.jpg')">
                     </div>
                     <h3>Esküvői köszönőajándék</h3>
-                    <p class="description">
-                        <strong>Esküvői köszönő ajándék – személyre szabott emlék</strong><br>
-                        Elegáns és figyelmes apróság a nagy napról. Egyedileg személyre szabható névvel, dátummal vagy üzenettel.<br>
-                        🎁 Ideális választás, amely maradandó emlék a vendégeknek.
-                    </p>
+                    <p class="description">Személyre szabott apróságok a vendégeknek a nagy napra.</p>
                     <p class="price">Kérjen árat</p>
                     <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
                 </div>
@@ -98,18 +95,9 @@
                     <div class="product-gallery">
                         <img src="kepek/ko1.jpg" onclick="changeImage('img-3', 'kepek/ko1.jpg')">
                         <img src="kepek/ko2.jpg" onclick="changeImage('img-3', 'kepek/ko2.jpg')">
-                        <img src="kepek/ko3.jpg" onclick="changeImage('img-3', 'kepek/ko3.jpg')">
-                        <img src="kepek/ko4.jpg" onclick="changeImage('img-3', 'kepek/ko4.jpg')">
-                        <img src="kepek/ko5.jpg" onclick="changeImage('img-3', 'kepek/ko5.jpg')">
                     </div>
                     <h3>Egyedi Fotókő</h3>
-                    <p class="description">
-                        <strong>„Vidd kőbe a legszebb emlékeidet!”</strong> 🪨<br><br>
-                        Felejtsd el a fakuló papírképeket! A természetes palakő örök életűvé teszi fotóidat:<br>
-                        • ✨ <strong>Egyedi:</strong> Saját fotóval, élénk színekkel.<br>
-                        • 🏔 <strong>Természetes:</strong> Elegáns, rusztikus kőfelület.<br>
-                        • ⏳ <strong>Időtálló:</strong> Karcmentes és sosem halványul el.
-                    </p>
+                    <p class="description">Természetes palakőre szublimált fotó, rusztikus élekkel.</p>
                     <p class="price">5.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('fotoko')">Megrendelem</button>
                 </div>
@@ -118,11 +106,9 @@
                     <img src="kepek/grinch.jpg" id="img-4" class="product-image-main" onclick="openModal(this.src)">
                     <div class="product-gallery">
                         <img src="kepek/grinch.jpg" onclick="changeImage('img-4', 'kepek/grinch.jpg')">
-                        <img src="kepek/grinch1.jpg" onclick="changeImage('img-4', 'kepek/grinch1.jpg')">
-                        <img src="kepek/grinch2.jpg" onclick="changeImage('img-4', 'kepek/grinch2.jpg')">
                     </div>
                     <h3>Led lámpa (Grinch)</h3>
-                    <p class="description">💡 LED lámpa – háromféle fény, egyedi hangulat. Modern, energiatakarékos dekoráció.</p>
+                    <p class="description">Egyedi hangulatvilágítás háromféle fénnyel.</p>
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('led-lampa')">Megrendelem</button>
                 </div>
@@ -131,11 +117,9 @@
                     <img src="kepek/szarvas.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)">
                     <div class="product-gallery">
                         <img src="kepek/szarvas.jpg" onclick="changeImage('img-5', 'kepek/szarvas.jpg')">
-                        <img src="kepek/szarvas1.jpg" onclick="changeImage('img-5', 'kepek/szarvas1.jpg')">
-                        <img src="kepek/szarvas2.jpg" onclick="changeImage('img-5', 'kepek/szarvas2.jpg')">
                     </div>
                     <h3>Rénszarvasos LED lámpa</h3>
-                    <p class="description">Ünnepi hangulatú rénszarvasos lámpa modern LED technológiával.</p>
+                    <p class="description">Ünnepi dekoráció modern LED technológiával.</p>
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
                 </div>
@@ -146,13 +130,7 @@
                         <img src="kepek/jutalom.jpg" onclick="changeImage('img-6', 'kepek/jutalom.jpg')">
                     </div>
                     <h3>Jutalompont rendszer</h3>
-                    <p class="description">
-                        <strong>⭐ Jutalompont rendszer – tanulás játékosan</strong><br><br>
-                        Motiváld gyermekedet rendrakásra vagy tanulásra pozitív megerősítéssel!<br>
-                        • 🎯 <strong>Játékos:</strong> A feladatok elvégzése élménnyé válik.<br>
-                        • ✅ <strong>Hatékony:</strong> Felelősségre és kitartásra tanít.<br>
-                        • 🏠 <strong>Ideális:</strong> Óvodás és iskolás korosztálynak.
-                    </p>
+                    <p class="description">Játékos motiváció gyerekeknek a mindennapi feladatokhoz.</p>
                     <p class="price">Kérjen árat</p>
                     <button class="buy-button" onclick="openOrder('jutalompont')">Megrendelem</button>
                 </div>
@@ -160,6 +138,11 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Kreatívlenyomat</p>
+        <p style="color: #d4af37; font-size: 0.8rem; margin-top: 5px;">Az oldal fejlesztés alatt áll.</p>
+    </footer>
 
     <script>
         function changeImage(imgId, fileName) {
@@ -179,6 +162,16 @@
         function closeOrder() {
             document.getElementById("orderModal").style.display = "none";
         }
+        
+        // Jelölőnégyzet figyelése
+        function toggleButton() {
+            const checkbox = document.getElementById('terms');
+            const button = document.getElementById('submitBtn');
+            button.disabled = !checkbox.checked;
+            button.style.opacity = checkbox.checked ? "1" : "0.5";
+            button.style.cursor = checkbox.checked ? "pointer" : "not-allowed";
+        }
+
         window.onclick = function(event) {
             if (event.target.id === "imageModal") closeModal();
             if (event.target.id === "orderModal") closeOrder();
