@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kreatívlenyomat - Egyedi Ajándékok és Fotókő</title>
-    <meta name="description" content="Egyedi fényképes ajándékok, fotókövek és gravírozott emlékek készítése.">
+    <meta name="description" content="Egyedi fényképes ajándékok, fotókövek és gravírozott emlékek készítése Polgáron.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,30 +20,28 @@
             <h2 style="color: #d4af37; text-align: center;">Megrendelés</h2>
             
             <form action="https://formspree.io/f/meeeqoyj" method="POST" class="order-form">
-                
                 <label>Választott termék:</label>
                 <select name="termek" id="productSelect" required>
                     <option value="karkoto-tarto">Születési karkötő tartó</option>
                     <option value="koszonto-ajandek">Esküvői köszönőajándék</option>
                     <option value="fotoko">Egyedi Fotókő</option>
-                    <option value="led-lampa">Led lámpa (Grinch)</option>
-                    <option value="szarvas-lampa">Rénszarvasos LED lámpa</option>
+                    <option value="grinch-lampa">Grinch LED lámpa</option>
+                    <option value="szarvas-lampa">Rénszarvas LED lámpa</option>
                     <option value="jutalompont">Jutalompont rendszer</option>
                 </select>
 
                 <input type="text" name="nev" placeholder="Az Ön neve" required>
                 <input type="email" name="_replyto" placeholder="Az Ön e-mail címe" required>
-                
-                <textarea name="message" rows="3" placeholder="Üzenet, felirat vagy egyéb kérés..."></textarea>
+                <textarea name="message" rows="3" placeholder="Üzenet vagy felirat szövege..."></textarea>
 
-                <p style="font-size: 0.8rem; color: #d4af37; background: #333; padding: 10px; border-radius: 5px; margin: 10px 0;">
-                    📸 <strong>Fényképküldés:</strong> A kiválasztott fotót a megrendelés elküldése után, az adategyeztetés során e-mailben vagy Messengeren tudja majd elküldeni nekem.
+                <p style="font-size: 0.8rem; color: #d4af37; background: #222; padding: 10px; border-radius: 5px; margin: 10px 0; border: 1px solid #444;">
+                    📸 <strong>Fényképküldés:</strong> A fotót a rendelés elküldése után, az adategyeztetéskor e-mailben vagy Messengeren tudja elküldeni.
                 </p>
 
-                <div style="display: flex; align-items: flex-start; gap: 10px; margin-top: 10px; text-align: left;">
+                <div style="display: flex; align-items: flex-start; gap: 10px; margin-top: 10px;">
                     <input type="checkbox" id="terms" style="width: 25px; height: 25px; cursor: pointer;" onchange="toggleButton()">
                     <label for="terms" style="font-size: 0.8rem; color: #ccc; cursor: pointer;">
-                        Elfogadom, hogy a rendelésem csak az adategyeztetés, valamint a termék és a szállítási költség rendezése után válik véglegessé.
+                        Elfogadom, hogy a rendelésem csak adategyeztetés és a költségek rendezése után válik véglegessé.
                     </label>
                 </div>
 
@@ -61,52 +59,80 @@
     <main>
         <section class="hero">
             <h2>Egyedi ajándékok, örök emlékek</h2>
-            <p>Személyre szabott termékek készítése szublimációval és lézergravírozással Polgáron.</p>
+            <p>Személyre szabott termékek készítése Polgáron.</p>
         </section>
 
         <section class="products">
             <div class="product-grid">
+                
                 <div class="product-card">
-                    <img src="kepek/karkoto.jpg" id="img-1" class="product-image-main" onclick="openModal(this.src)">
+                    <img src="kepek/szuletes-karkoto-tarto-fa-ajandek.jpg" id="img-1" class="product-image-main" onclick="openModal(this.src)" alt="Születési karkötő tartó">
+                    <div class="product-gallery">
+                        <img src="kepek/szuletes-karkoto-tarto-fa-ajandek.jpg" onclick="changeImage('img-1', 'kepek/szuletes-karkoto-tarto-fa-ajandek.jpg')">
+                        <img src="kepek/szuletes-karkoto-tarto-fa-ajandek-1.jpg" onclick="changeImage('img-1', 'kepek/szuletes-karkoto-tarto-fa-ajandek-1.jpg')">
+                    </div>
                     <h3>Születési karkötő tartó</h3>
                     <p class="price">4.500 Ft</p>
                     <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
                 </div>
 
                 <div class="product-card">
-                    <img src="kepek/koszonto.jpg" id="img-2" class="product-image-main" onclick="openModal(this.src)">
+                    <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes.jpg" id="img-2" class="product-image-main" onclick="openModal(this.src)" alt="Esküvői köszönőajándék">
+                    <div class="product-gallery">
+                        <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes.jpg" onclick="changeImage('img-2', 'kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes.jpg')">
+                        <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes-1.jpg" onclick="changeImage('img-2', 'kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes-1.jpg')">
+                        <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes-2.jpg" onclick="changeImage('img-2', 'kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes-2.jpg')">
+                    </div>
                     <h3>Esküvői köszönőajándék</h3>
                     <p class="price">Kérjen árat</p>
                     <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
                 </div>
 
                 <div class="product-card">
-                    <img src="kepek/ko1.jpg" id="img-3" class="product-image-main" onclick="openModal(this.src)">
+                    <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek.jpg" id="img-3" class="product-image-main" onclick="openModal(this.src)" alt="Egyedi fotókő">
+                    <div class="product-gallery">
+                        <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek.jpg" onclick="changeImage('img-3', 'kepek/egyedi-fenykepes-fotoko-palako-ajandek.jpg')">
+                        <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek-1.jpg" onclick="changeImage('img-3', 'kepek/egyedi-fenykepes-fotoko-palako-ajandek-1.jpg')">
+                        <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek-2.jpg" onclick="changeImage('img-3', 'kepek/egyedi-fenykepes-fotoko-palako-ajandek-2.jpg')">
+                        <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek-3.jpg" onclick="changeImage('img-3', 'kepek/egyedi-fenykepes-fotoko-palako-ajandek-3.jpg')">
+                        <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek-4.jpg" onclick="changeImage('img-3', 'kepek/egyedi-fenykepes-fotoko-palako-ajandek-4.jpg')">
+                    </div>
                     <h3>Egyedi Fotókő</h3>
                     <p class="price">5.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('fotoko')">Megrendelem</button>
                 </div>
 
                 <div class="product-card">
-                    <img src="kepek/grinch.jpg" id="img-4" class="product-image-main" onclick="openModal(this.src)">
-                    <h3>Led lámpa (Grinch)</h3>
+                    <img src="kepek/grinch-karacsonyi-led-lampa-vilagitas.jpg" id="img-4" class="product-image-main" onclick="openModal(this.src)" alt="Grinch lámpa">
+                    <div class="product-gallery">
+                        <img src="kepek/grinch-karacsonyi-led-lampa-vilagitas.jpg" onclick="changeImage('img-4', 'kepek/grinch-karacsonyi-led-lampa-vilagitas.jpg')">
+                        <img src="kepek/grinch-karacsonyi-led-lampa-vilagitas-1.jpg" onclick="changeImage('img-4', 'kepek/grinch-karacsonyi-led-lampa-vilagitas-1.jpg')">
+                        <img src="kepek/grinch-karacsonyi-led-lampa-vilagitas-2.jpg" onclick="changeImage('img-4', 'kepek/grinch-karacsonyi-led-lampa-vilagitas-2.jpg')">
+                    </div>
+                    <h3>Grinch LED lámpa</h3>
                     <p class="price">4.900 Ft</p>
-                    <button class="buy-button" onclick="openOrder('led-lampa')">Megrendelem</button>
+                    <button class="buy-button" onclick="openOrder('grinch-lampa')">Megrendelem</button>
                 </div>
 
                 <div class="product-card">
-                    <img src="kepek/szarvas.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)">
-                    <h3>Rénszarvasos LED lámpa</h3>
+                    <img src="kepek/renszarvas-led-lampa-karacsonyi-dekoracio.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)" alt="Rénszarvas lámpa">
+                    <div class="product-gallery">
+                        <img src="kepek/renszarvas-led-lampa-karacsonyi-dekoracio.jpg" onclick="changeImage('img-5', 'kepek/renszarvas-led-lampa-karacsonyi-dekoracio.jpg')">
+                        <img src="kepek/renszarvas-led-lampa-karacsonyi-dekoracio-1.jpg" onclick="changeImage('img-5', 'kepek/renszarvas-led-lampa-karacsonyi-dekoracio-1.jpg')">
+                        <img src="kepek/renszarvas-led-lampa-karacsonyi-dekoracio-2.jpg" onclick="changeImage('img-5', 'kepek/renszarvas-led-lampa-karacsonyi-dekoracio-2.jpg')">
+                    </div>
+                    <h3>Rénszarvas LED lámpa</h3>
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
                 </div>
 
                 <div class="product-card">
-                    <img src="kepek/jutalom.jpg" id="img-6" class="product-image-main" onclick="openModal(this.src)">
+                    <img src="kepek/gyerek-jutalompont-gyujto-tablazat-fabol.jpg" id="img-6" class="product-image-main" onclick="openModal(this.src)" alt="Jutalompont gyűjtő">
                     <h3>Jutalompont rendszer</h3>
                     <p class="price">Kérjen árat</p>
                     <button class="buy-button" onclick="openOrder('jutalompont')">Megrendelem</button>
                 </div>
+
             </div>
         </section>
     </main>
@@ -117,11 +143,23 @@
     </footer>
 
     <script>
-        function changeImage(imgId, fileName) { document.getElementById(imgId).src = fileName; }
-        function openModal(src) { document.getElementById("imageModal").style.display = "flex"; document.getElementById("modalImg").src = src; }
-        function closeModal() { document.getElementById("imageModal").style.display = "none"; }
-        function openOrder(productValue) { document.getElementById("orderModal").style.display = "flex"; document.getElementById("productSelect").value = productValue; }
-        function closeOrder() { document.getElementById("orderModal").style.display = "none"; }
+        function changeImage(imgId, fileName) { 
+            document.getElementById(imgId).src = fileName; 
+        }
+        function openModal(src) { 
+            document.getElementById("imageModal").style.display = "flex"; 
+            document.getElementById("modalImg").src = src; 
+        }
+        function closeModal() { 
+            document.getElementById("imageModal").style.display = "none"; 
+        }
+        function openOrder(productValue) { 
+            document.getElementById("orderModal").style.display = "flex"; 
+            document.getElementById("productSelect").value = productValue; 
+        }
+        function closeOrder() { 
+            document.getElementById("orderModal").style.display = "none"; 
+        }
         function toggleButton() {
             const checkbox = document.getElementById('terms');
             const button = document.getElementById('submitBtn');
