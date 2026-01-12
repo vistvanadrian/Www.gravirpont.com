@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -27,6 +28,7 @@
                     <option value="fotoko">Egyedi Fotókő</option>
                     <option value="led-lampa">Led lámpa (Grinch)</option>
                     <option value="szarvas-lampa">Rénszarvasos LED lámpa</option>
+                    <option value="jutalompont">Jutalompont rendszer</option>
                 </select>
 
                 <input type="text" name="nev" placeholder="Az Ön neve" required>
@@ -56,23 +58,23 @@
         <section class="products">
             <div class="product-grid">
                 
-               <div class="product-card">
-    <img src="kepek/karkoto.jpg" id="img-1" class="product-image-main" onclick="openModal(this.src)">
-    <div class="product-gallery">
-        <img src="kepek/karkoto.jpg" onclick="changeImage('img-1', 'kepek/karkoto.jpg')">
-        <img src="kepek/karkoto2.jpg" onclick="changeImage('img-1', 'kepek/karkoto2.jpg')">
-    </div>
-    <h3>Születési karkötő tartó</h3>
-    <p class="description">
-        <strong>„Az első pillanat, amely örökre megmarad.”</strong> ✨<br><br>
-        Ne hagyd a fiók mélyén a kórházi karkötőt! Ez a névre szóló tartó egy igazi időkapszula:<br>
-        • ✨ <strong>Egyedi:</strong> Gravírozott név és adatok.<br>
-        • 🎁 <strong>Tökéletes ajándék:</strong> Babalátogatóba vagy keresztelőre.<br>
-        • ❤️ <strong>Örök emlék:</strong> Szülőknek és nagyszülőknek.
-    </p>
-    <p class="price">4.500 Ft</p>
-    <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
-</div>
+                <div class="product-card">
+                    <img src="kepek/karkoto.jpg" id="img-1" class="product-image-main" onclick="openModal(this.src)">
+                    <div class="product-gallery">
+                        <img src="kepek/karkoto.jpg" onclick="changeImage('img-1', 'kepek/karkoto.jpg')">
+                        <img src="kepek/karkoto2.jpg" onclick="changeImage('img-1', 'kepek/karkoto2.jpg')">
+                    </div>
+                    <h3>Születési karkötő tartó</h3>
+                    <p class="description">
+                        <strong>„Az első pillanat, amely örökre megmarad.”</strong> ✨<br><br>
+                        Ne hagyd a fiók mélyén a kórházi karkötőt! Ez a névre szóló tartó egy igazi időkapszula:<br>
+                        • ✨ <strong>Egyedi:</strong> Gravírozott név és adatok.<br>
+                        • 🎁 <strong>Tökéletes ajándék:</strong> Babalátogatóba vagy keresztelőre.<br>
+                        • ❤️ <strong>Örök emlék:</strong> Szülőknek és nagyszülőknek.
+                    </p>
+                    <p class="price">4.500 Ft</p>
+                    <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
+                </div>
 
                 <div class="product-card">
                     <img src="kepek/koszonto.jpg" id="img-2" class="product-image-main" onclick="openModal(this.src)">
@@ -101,14 +103,13 @@
                         <img src="kepek/ko5.jpg" onclick="changeImage('img-3', 'kepek/ko5.jpg')">
                     </div>
                     <h3>Egyedi Fotókő</h3>
-                   <p class="description">
-    <strong>„Vidd kőbe a legszebb emlékeidet!”</strong> 🪨<br><br>
-    Felejtsd el a fakuló papírképeket! A természetes palakő és a speciális technológia örök életűvé teszi fotóidat:<br>
-    • ✨ <strong>Egyedi:</strong> Saját fotóval, élénk színekkel.<br>
-    • 🏔 <strong>Természetes:</strong> Elegáns, rusztikus kőfelület.<br>
-    • ⏳ <strong>Időtálló:</strong> Karcmentes és sosem halványul el.<br>
-    🎁 Különleges ajándék esküvőre vagy évfordulóra.
-</p>
+                    <p class="description">
+                        <strong>„Vidd kőbe a legszebb emlékeidet!”</strong> 🪨<br><br>
+                        Felejtsd el a fakuló papírképeket! A természetes palakő örök életűvé teszi fotóidat:<br>
+                        • ✨ <strong>Egyedi:</strong> Saját fotóval, élénk színekkel.<br>
+                        • 🏔 <strong>Természetes:</strong> Elegáns, rusztikus kőfelület.<br>
+                        • ⏳ <strong>Időtálló:</strong> Karcmentes és sosem halványul el.
+                    </p>
                     <p class="price">5.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('fotoko')">Megrendelem</button>
                 </div>
@@ -120,15 +121,8 @@
                         <img src="kepek/grinch1.jpg" onclick="changeImage('img-4', 'kepek/grinch1.jpg')">
                         <img src="kepek/grinch2.jpg" onclick="changeImage('img-4', 'kepek/grinch2.jpg')">
                     </div>
-                    <h3>Led lámpa</h3>
-                    <p class="description">
-                        <strong>💡 LED lámpa – háromféle fény, egyedi hangulat</strong><br>
-                        Modern, energiatakarékos dekoráció, amely minden otthonba illik:<br>
-                        • 🌈 Színes fény – hangulatvilágításhoz<br>
-                        • 🌤 Természetes fehér – mindennapi használatra<br>
-                        • ❄️ Hideg fehér – erős, tiszta fény<br>
-                        Alacsony fogyasztás, hosszú élettartam.
-                    </p>
+                    <h3>Led lámpa (Grinch)</h3>
+                    <p class="description">💡 LED lámpa – háromféle fény, egyedi hangulat. Modern, energiatakarékos dekoráció.</p>
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('led-lampa')">Megrendelem</button>
                 </div>
@@ -141,12 +135,26 @@
                         <img src="kepek/szarvas2.jpg" onclick="changeImage('img-5', 'kepek/szarvas2.jpg')">
                     </div>
                     <h3>Rénszarvasos LED lámpa</h3>
-                    <p class="description">
-                        Egyedi, ünnepi hangulatú rénszarvasos lámpa.<br>
-                        Modern LED technológia, háromféle választható fénnyel. Tökéletes karácsonyi dekoráció vagy ajándék.
-                    </p>
+                    <p class="description">Ünnepi hangulatú rénszarvasos lámpa modern LED technológiával.</p>
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="kepek/jutalom.jpg" id="img-6" class="product-image-main" onclick="openModal(this.src)">
+                    <div class="product-gallery">
+                        <img src="kepek/jutalom.jpg" onclick="changeImage('img-6', 'kepek/jutalom.jpg')">
+                    </div>
+                    <h3>Jutalompont rendszer</h3>
+                    <p class="description">
+                        <strong>⭐ Jutalompont rendszer – tanulás játékosan</strong><br><br>
+                        Motiváld gyermekedet rendrakásra vagy tanulásra pozitív megerősítéssel!<br>
+                        • 🎯 <strong>Játékos:</strong> A feladatok elvégzése élménnyé válik.<br>
+                        • ✅ <strong>Hatékony:</strong> Felelősségre és kitartásra tanít.<br>
+                        • 🏠 <strong>Ideális:</strong> Óvodás és iskolás korosztálynak.
+                    </p>
+                    <p class="price">Kérjen árat</p>
+                    <button class="buy-button" onclick="openOrder('jutalompont')">Megrendelem</button>
                 </div>
 
             </div>
