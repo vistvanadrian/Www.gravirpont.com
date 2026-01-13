@@ -28,6 +28,7 @@
                     <option value="grinch-lampa">Grinch LED lámpa</option>
                     <option value="szarvas-lampa">Rénszarvas LED lámpa</option>
                     <option value="jutalompont">Jutalompont rendszer</option>
+ <option value="orokrozsa">Fa örökrózsa (Valentin-nap)</option>           
                 </select>
 
                 <input type="text" name="nev" placeholder="Az Ön neve" required>
@@ -125,7 +126,19 @@
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
                 </div>
-
+<div class="product-card">
+    <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek.jpg" id="img-7" class="product-image-main" onclick="openModal(this.src)" alt="Fa örökrózsa Valentin-napra">
+    <div class="product-gallery">
+        <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek.jpg" onclick="changeImage('img-7', 'kepek/fa-orokrozsa-valentin-napi-ajandek-noknek.jpg')">
+        <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek-1.jpg" onclick="changeImage('img-7', 'kepek/fa-orokrozsa-valentin-napi-ajandek-noknek-1.jpg')">
+        <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek-2.jpg" onclick="changeImage('img-7', 'kepek/fa-orokrozsa-valentin-napi-ajandek-noknek-2.jpg')">
+        <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek-3.jpg" onclick="changeImage('img-7', 'kepek/fa-orokrozsa-valentin-napi-ajandek-noknek-3.jpg')">
+        <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek-4.jpg" onclick="changeImage('img-7', 'kepek/fa-orokrozsa-valentin-napi-ajandek-noknek-4.jpg')">
+    </div>
+    <h3>Fa örökrózsa (Valentin-nap)</h3>
+    <p class="price">2.000 Ft</p>
+    <button class="buy-button" onclick="openOrder('orokrozsa')">Megrendelem</button>
+</div>
                 <div class="product-card">
                     <img src="kepek/gyerek-jutalompont-gyujto-tablazat-fabol.jpg" id="img-6" class="product-image-main" onclick="openModal(this.src)" alt="Jutalompont gyűjtő">
                     <h3>Jutalompont rendszer</h3>
