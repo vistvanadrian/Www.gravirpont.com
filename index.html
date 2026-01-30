@@ -22,15 +22,16 @@
             <div class="product-grid">
                 
                 <article class="product-card">
-                    <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek.jpg" id="img-7" class="product-image-main" onclick="openModal(this.src)" alt="Fa örökrózsa">
+                    <img src="kepek/matek-majom-mechanikus-szorzotabla-oktato-jatek.jpg" id="img-10" class="product-image-main" onclick="openModal(this.src)">
                     <div class="product-gallery">
-                        <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek.jpg" onclick="changeImage('img-7', this.src)">
-                        <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek-1.jpg" onclick="changeImage('img-7', this.src)">
+                        <img src="kepek/matek-majom-mechanikus-szorzotabla-oktato-jatek.jpg" onclick="changeImage('img-10', this.src)">
+                        <img src="kepek/okos-majom-szamolo-automata-gyerekeknek.jpg" onclick="changeImage('img-10', this.src)">
+                        <img src="kepek/retro-mechanikus-matek-majom-ajandek.jpg" onclick="changeImage('img-10', this.src)">
                     </div>
-                    <h3>Fa örökrózsa</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Elegáns, fából készült örökrózsa, amely soha nem hervad el. Tökéletes választás Valentin-napra vagy évfordulóra.</p>
-                    <p class="price">2.000 Ft</p>
-                    <button class="buy-button" onclick="openOrder('orokrozsa')">Megrendelem</button>
+                    <h3>Matek-Majom: Mechanikus Szorzótábla</h3>
+                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Zseniális mechanikus játék, amely segít a gyerekeknek játékosan elsajátítani a szorzótáblát. Nincs szükség elemre, csak logikára!</p>
+                    <p class="price">6.300 Ft</p>
+                    <button class="buy-button" onclick="openOrder('matek-majom')">Megrendelem</button>
                 </article>
 
                 <article class="product-card">
@@ -47,18 +48,6 @@
                 </article>
 
                 <article class="product-card">
-                    <img src="kepek/szuletes-karkoto-tarto-fa-ajandek.jpg" id="img-1" class="product-image-main" onclick="openModal(this.src)">
-                    <div class="product-gallery">
-                        <img src="kepek/szuletes-karkoto-tarto-fa-ajandek.jpg" onclick="changeImage('img-1', this.src)">
-                        <img src="kepek/szuletes-karkoto-tarto-fa-ajandek-1.jpg" onclick="changeImage('img-1', this.src)">
-                    </div>
-                    <h3>Születési karkötő tartó</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Őrizze meg gyermeke születésének legszebb emlékét ezzel az egyedi, névvel és adatokkal ellátott fatartóval.</p>
-                    <p class="price">4.500 Ft</p>
-                    <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
-                </article>
-
-                <article class="product-card">
                     <img src="kepek/gyedi-gravirozott-fa-soroshordo-ajandek-ferfiaknak.jpg" id="img-8" class="product-image-main" onclick="openModal(this.src)">
                     <div class="product-gallery">
                         <img src="kepek/gyedi-gravirozott-fa-soroshordo-ajandek-ferfiaknak.jpg" onclick="changeImage('img-8', this.src)">
@@ -72,9 +61,25 @@
                 </article>
 
                 <article class="product-card">
+                    <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek.jpg" id="img-7" class="product-image-main" onclick="openModal(this.src)">
+                    <h3>Fa örökrózsa</h3>
+                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Elegáns, fából készült örökrózsa, amely soha nem hervad el. Tökéletes választás Valentin-napra.</p>
+                    <p class="price">2.000 Ft</p>
+                    <button class="buy-button" onclick="openOrder('orokrozsa')">Megrendelem</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="kepek/szuletes-karkoto-tarto-fa-ajandek.jpg" id="img-1" class="product-image-main" onclick="openModal(this.src)">
+                    <h3>Születési karkötő tartó</h3>
+                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Őrizze meg gyermeke születésének legszebb emlékét ezzel az egyedi fatartóval.</p>
+                    <p class="price">4.500 Ft</p>
+                    <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
+                </article>
+
+                <article class="product-card">
                     <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek.jpg" id="img-3" class="product-image-main" onclick="openModal(this.src)">
                     <h3>Egyedi Fotókő</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Természetes palakőre nyomtatott fénykép, amely örök dísze lesz a lakásnak. Különleges és tartós ajándék.</p>
+                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Természetes palakőre nyomtatott fénykép, amely örök dísze lesz a lakásnak.</p>
                     <p class="price">5.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('fotoko')">Megrendelem</button>
                 </article>
@@ -119,6 +124,7 @@
             <h2 style="color: #d4af37; text-align: center;">Megrendelés</h2>
             <form action="https://formspree.io/f/meeeqoyj" method="POST" class="order-form">
                 <select name="termek" id="productSelect" required>
+                    <option value="matek-majom">Matek-Majom: Mechanikus Szorzótábla</option>
                     <option value="orokrozsa">Fa örökrózsa</option>
                     <option value="keretes-fenykep">Egyedi keretes fénykép</option>
                     <option value="karkoto-tarto">Születési karkötő tartó</option>
@@ -131,7 +137,7 @@
                 </select>
                 <input type="text" name="nev" placeholder="Az Ön neve" required>
                 <input type="email" name="email" placeholder="E-mail címe" required>
-                <textarea name="message" rows="3" placeholder="Üzenet (pl. fénykép adatai, felirat)..."></textarea>
+                <textarea name="message" rows="3" placeholder="Üzenet..."></textarea>
                 <button type="submit" class="buy-button">Küldés</button>
             </form>
         </div>
