@@ -34,6 +34,22 @@
                 </article>
 
                 <article class="product-card">
+                    <img src="kepek/egyedi-keretes-fenykep-szublimacios-ajandek.jpg" id="img-9" class="product-image-main" onclick="openModal(this.src)">
+                    <div class="product-gallery">
+                        <img src="kepek/egyedi-keretes-fenykep-szublimacios-ajandek.jpg" onclick="changeImage('img-9', this.src)">
+                        <img src="kepek/szemelyre-szabott-fenykepes-ajandek-keretben.jpg" onclick="changeImage('img-9', this.src)">
+                        <img src="kepek/szublimalt-egyedi-fotos-ajandektargy.jpg" onclick="changeImage('img-9', this.src)">
+                        <img src="kepek/fenykepes-emlek-fa-keretben-polgar.jpg" onclick="changeImage('img-9', this.src)">
+                        <img src="kepek/szublimacios-eljarassal-keszult-fenykepkeret.jpg" onclick="changeImage('img-9', this.src)">
+                        <img src="kepek/egyedi-asztali-fenykep-keret-ajandek.jpg" onclick="changeImage('img-9', this.src)">
+                    </div>
+                    <h3>Egyedi keretes fénykép</h3>
+                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Speciális szublimációs technológiával készült, élénk színű és tartós fotó egyedi keretben. Örök emlék a legszebb pillanatoknak.</p>
+                    <p class="price">3.500 Ft</p>
+                    <button class="buy-button" onclick="openOrder('keretes-fenykep')">Megrendelem</button>
+                </article>
+
+                <article class="product-card">
                     <img src="kepek/szuletes-karkoto-tarto-fa-ajandek.jpg" id="img-1" class="product-image-main" onclick="openModal(this.src)">
                     <div class="product-gallery">
                         <img src="kepek/szuletes-karkoto-tarto-fa-ajandek.jpg" onclick="changeImage('img-1', this.src)">
@@ -43,14 +59,6 @@
                     <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Őrizze meg gyermeke születésének legszebb emlékét ezzel az egyedi, névvel és adatokkal ellátott fatartóval.</p>
                     <p class="price">4.500 Ft</p>
                     <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
-                </article>
-
-                <article class="product-card">
-                    <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes.jpg" id="img-2" class="product-image-main" onclick="openModal(this.src)">
-                    <h3>Esküvői köszönőajándék</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Egyedi hűtőmágnesek és apróságok, amelyekkel felejthetetlenné teheti a nagy napot vendégei számára.</p>
-                    <p class="price">Kérjen árat</p>
-                    <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
                 </article>
 
                 <article class="product-card">
@@ -75,9 +83,15 @@
                 </article>
 
                 <article class="product-card">
+                    <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes.jpg" id="img-2" class="product-image-main" onclick="openModal(this.src)">
+                    <h3>Esküvői köszönőajándék</h3>
+                    <p class="price">Kérjen árat</p>
+                    <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
+                </article>
+
+                <article class="product-card">
                     <img src="kepek/grinch-karacsonyi-led-lampa-vilagitas.jpg" id="img-4" class="product-image-main" onclick="openModal(this.src)">
                     <h3>Grinch LED lámpa</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Hangulatos karácsonyi világítás a huncut Grinch stílusában. Garantált siker az ünnepi dekorációban.</p>
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('grinch-lampa')">Megrendelem</button>
                 </article>
@@ -85,7 +99,6 @@
                 <article class="product-card">
                     <img src="kepek/renszarvas-led-lampa-karacsonyi-dekoracio.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)">
                     <h3>Rénszarvas LED lámpa</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Klasszikus rénszarvas mintájú hangulatvilágítás, amely melegséget visz a hideg téli estékbe.</p>
                     <p class="price">4.900 Ft</p>
                     <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
                 </article>
@@ -93,7 +106,6 @@
                 <article class="product-card">
                     <img src="kepek/gyerek-jutalompont-gyujto-tablazat-fabol.jpg" id="img-6" class="product-image-main" onclick="openModal(this.src)">
                     <h3>Jutalompont rendszer</h3>
-                    <p style="font-size: 0.85rem; color: #ccc; margin: 10px 0;">Játékos motivációs tábla gyerekeknek. Segít a napi rutin kialakításában és a jó cselekedetek jutalmazásában.</p>
                     <p class="price">Kérjen árat</p>
                     <button class="buy-button" onclick="openOrder('jutalompont')">Megrendelem</button>
                 </article>
@@ -111,6 +123,7 @@
             <form action="https://formspree.io/f/meeeqoyj" method="POST" class="order-form">
                 <select name="termek" id="productSelect" required>
                     <option value="orokrozsa">Fa örökrózsa</option>
+                    <option value="keretes-fenykep">Egyedi keretes fénykép</option>
                     <option value="karkoto-tarto">Születési karkötő tartó</option>
                     <option value="koszonto-ajandek">Esküvői köszönőajándék</option>
                     <option value="soroshordo">Egyedi Gravírozott Söröshordó</option>
@@ -121,7 +134,7 @@
                 </select>
                 <input type="text" name="nev" placeholder="Az Ön neve" required>
                 <input type="email" name="email" placeholder="E-mail címe" required>
-                <textarea name="message" rows="3" placeholder="Üzenet..."></textarea>
+                <textarea name="message" rows="3" placeholder="Üzenet (pl. fénykép adatai, felirat)..."></textarea>
                 <button type="submit" class="buy-button">Küldés</button>
             </form>
         </div>
