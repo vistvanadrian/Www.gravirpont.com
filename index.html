@@ -4,144 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kreatívlenyomat - Egyedi Ajándékok Polgáron</title>
-    
-    <style>
-        /* CSS STÍLUSOK - Itt javítottam a sárga csíkot */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #1a1a1a;
-            color: #f4f4f4;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            line-height: 1.6;
-            width: 100%;
-            overflow-x: hidden; /* Megszünteti az oldalirányú csúszkálást */
-        }
-
-        header {
-            background-color: #000;
-            padding: 1.5rem 0; /* Oldalsó padding levéve a csík miatt */
-            text-align: center;
-            border-bottom: 2px solid #d4af37; /* A sárga csík */
-            width: 100%;
-            display: block;
-        }
-
-        header h1 {
-            font-size: 1.6rem;
-            text-transform: uppercase;
-            color: #fff;
-            padding: 0 10px;
-        }
-
-        .hero {
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        .hero h2 { color: #d4af37; margin-bottom: 1rem; }
-
-        /* TERMÉKEK */
-        .product-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 1rem;
-        }
-
-        .product-card {
-            background-color: #222;
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 15px;
-            width: 100%;
-            max-width: 320px;
-            text-align: center;
-        }
-
-        .product-image-main {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        .product-gallery {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin: 10px 0;
-        }
-
-        .product-gallery img {
-            width: 45px;
-            height: 45px;
-            object-fit: cover;
-            border-radius: 5px;
-            border: 1px solid #444;
-        }
-
-        .price { font-size: 1.4rem; font-weight: bold; margin: 10px 0; }
-
-        .buy-button {
-            background-color: #d4af37;
-            color: #000;
-            border: none;
-            padding: 12px;
-            width: 100%;
-            border-radius: 8px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        /* MODAL / ABLAKOK */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0; top: 0; width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            justify-content: center;
-            align-items: center;
-        }
-
-        #modalImg { max-width: 90%; max-height: 80%; border: 2px solid #d4af37; }
-
-        .order-content {
-            background-color: #1a1a1a;
-            padding: 20px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 400px;
-            border: 2px solid #d4af37;
-            position: relative;
-        }
-
-        .order-form input, .order-form select, .order-form textarea {
-            width: 100%; padding: 10px; margin-bottom: 10px;
-            border-radius: 6px; border: 1px solid #444;
-            background: #000; color: #fff;
-        }
-
-        .close-modal {
-            position: absolute; top: 10px; right: 20px;
-            color: #fff; font-size: 30px; cursor: pointer;
-        }
-
-        footer {
-            background: #000;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid #333;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -184,6 +47,17 @@
                 </article>
 
                 <article class="product-card">
+                    <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes.jpg" id="img-2" class="product-image-main" onclick="openModal(this.src)">
+                    <div class="product-gallery">
+                        <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes.jpg" onclick="changeImage('img-2', this.src)">
+                        <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes-1.jpg" onclick="changeImage('img-2', this.src)">
+                    </div>
+                    <h3>Esküvői köszönőajándék</h3>
+                    <p class="price">Kérjen árat</p>
+                    <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
+                </article>
+
+                <article class="product-card">
                     <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek.jpg" id="img-3" class="product-image-main" onclick="openModal(this.src)">
                     <div class="product-gallery">
                         <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek.jpg" onclick="changeImage('img-3', this.src)">
@@ -194,21 +68,49 @@
                     <button class="buy-button" onclick="openOrder('fotoko')">Megrendelem</button>
                 </article>
 
+                <article class="product-card">
+                    <img src="kepek/grinch-karacsonyi-led-lampa-vilagitas.jpg" id="img-4" class="product-image-main" onclick="openModal(this.src)">
+                    <h3>Grinch LED lámpa</h3>
+                    <p class="price">4.900 Ft</p>
+                    <button class="buy-button" onclick="openOrder('grinch-lampa')">Megrendelem</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="kepek/renszarvas-led-lampa-karacsonyi-dekoracio.jpg" id="img-5" class="product-image-main" onclick="openModal(this.src)">
+                    <h3>Rénszarvas LED lámpa</h3>
+                    <p class="price">4.900 Ft</p>
+                    <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="kepek/gyerek-jutalompont-gyujto-tablazat-fabol.jpg" id="img-6" class="product-image-main" onclick="openModal(this.src)">
+                    <h3>Jutalompont rendszer</h3>
+                    <p class="price">Kérjen árat</p>
+                    <button class="buy-button" onclick="openOrder('jutalompont')">Megrendelem</button>
+                </article>
+
             </div>
         </section>
     </main>
 
-    <div id="imageModal" class="modal"><span class="close-modal" onclick="closeModal()">&times;</span><img id="modalImg"></div>
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img id="modalImg" src="">
+    </div>
 
     <div id="orderModal" class="modal">
         <div class="order-content">
             <span class="close-modal" onclick="closeOrder()">&times;</span>
             <h2 style="color: #d4af37; text-align: center;">Megrendelés</h2>
             <form action="https://formspree.io/f/meeeqoyj" method="POST" class="order-form">
-                <select name="termek" id="productSelect">
+                <select name="termek" id="productSelect" required>
                     <option value="orokrozsa">Fa örökrózsa</option>
-                    <option value="karkoto-tarto">Karkötő tartó</option>
-                    <option value="fotoko">Fotókő</option>
+                    <option value="karkoto-tarto">Születési karkötő tartó</option>
+                    <option value="koszonto-ajandek">Esküvői köszönőajándék</option>
+                    <option value="fotoko">Egyedi Fotókő</option>
+                    <option value="grinch-lampa">Grinch LED lámpa</option>
+                    <option value="szarvas-lampa">Rénszarvas LED lámpa</option>
+                    <option value="jutalompont">Jutalompont rendszer</option>
                 </select>
                 <input type="text" name="nev" placeholder="Az Ön neve" required>
                 <input type="email" name="email" placeholder="E-mail címe" required>
@@ -220,7 +122,7 @@
 
     <footer>
         <p>&copy; 2026 Kreatívlenyomat</p>
-        <p style="color: #d4af37; font-size: 0.8rem;">Az oldal fejlesztés alatt áll.</p>
+        <p style="color: #d4af37; font-size: 0.8rem; margin-top: 5px;">Az oldal fejlesztés alatt áll.</p>
     </footer>
 
     <script>
@@ -229,7 +131,10 @@
         function closeModal() { document.getElementById("imageModal").style.display = "none"; }
         function openOrder(val) { document.getElementById("orderModal").style.display = "flex"; document.getElementById("productSelect").value = val; }
         function closeOrder() { document.getElementById("orderModal").style.display = "none"; }
-        window.onclick = function(e) { if(e.target.className === 'modal') { closeModal(); closeOrder(); } }
+        window.onclick = function(e) { 
+            if(e.target.id === 'imageModal') closeModal(); 
+            if(e.target.id === 'orderModal') closeOrder(); 
+        }
     </script>
 </body>
 </html>
