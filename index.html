@@ -35,276 +35,256 @@
     </header>
 
     <main id="main-content">
-        <section class="hero" aria-label="Bemutatkozás">
+        <section class="hero">
             <h2>Egyedi ajándékok, örök emlékek</h2>
             <p>Személyre szabott, kézzel készült meglepetések minden alkalomra Polgáron.</p>
         </section>
 
-        <section class="products" aria-label="Termékeink">
-            <ul class="product-grid">
+        <section class="products">
+            <div class="product-grid">
 
-                <li>
-                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <img src="kepek/matek-majom-mechanikus-szorzotabla-oktato-jatek.jpg" 
+                         id="img-10" 
+                         class="product-image-main" 
+                         alt="Matek-Majom mechanikus szorzótábla oktató játék gyerekeknek"
+                         loading="lazy"
+                         width="400" 
+                         height="300"
+                         onclick="openModal(this.src)">
+                    <div class="product-gallery">
                         <img src="kepek/matek-majom-mechanikus-szorzotabla-oktato-jatek.jpg" 
-                             id="img-10" 
-                             class="product-image-main" 
-                             alt="Matek-Majom mechanikus szorzótábla oktató játék gyerekeknek"
+                             alt="Matek-Majom szorzótábla - első nézet"
                              loading="lazy"
-                             width="400" 
-                             height="300"
-                             onclick="openModal(this.src)">
-                        <div class="product-gallery">
-                            <img src="kepek/matek-majom-mechanikus-szorzotabla-oktato-jatek.jpg" 
-                                 alt="Matek-Majom szorzótábla - első nézet"
-                                 loading="lazy"
-                                 onclick="changeImage('img-10', this.src)">
-                            <img src="kepek/okos-majom-szamolo-automata-gyerekeknek.jpg" 
-                                 alt="Matek-Majom szorzótábla - második nézet"
-                                 loading="lazy"
-                                 onclick="changeImage('img-10', this.src)">
-                            <img src="kepek/retro-mechanikus-matek-majom-ajandek.jpg" 
-                                 alt="Matek-Majom szorzótábla - harmadik nézet"
-                                 loading="lazy"
-                                 onclick="changeImage('img-10', this.src)">
-                        </div>
-                        <h3 itemprop="name">Matek-Majom: Mechanikus Szorzótábla</h3>
-                        <p class="product-desc" itemprop="description">Zseniális mechanikus játék, amely segít a gyerekeknek játékosan elsajátítani a szorzótáblát. Nincs szükség elemre, csak logikára!</p>
-                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price" content="6300">6.300</span> 
-                            <span itemprop="priceCurrency" content="HUF">Ft</span>
-                            <meta itemprop="availability" content="https://schema.org/InStock">
-                        </p>
-                        <button class="buy-button" onclick="openOrder('matek-majom')">Megrendelem</button>
-                    </article>
-                </li>
+                             onclick="changeImage('img-10', this.src)">
+                        <img src="kepek/okos-majom-szamolo-automata-gyerekeknek.jpg" 
+                             alt="Matek-Majom szorzótábla - második nézet"
+                             loading="lazy"
+                             onclick="changeImage('img-10', this.src)">
+                        <img src="kepek/retro-mechanikus-matek-majom-ajandek.jpg" 
+                             alt="Matek-Majom szorzótábla - harmadik nézet"
+                             loading="lazy"
+                             onclick="changeImage('img-10', this.src)">
+                    </div>
+                    <h3 itemprop="name">Matek-Majom: Mechanikus Szorzótábla</h3>
+                    <p class="product-desc" itemprop="description">Zseniális mechanikus játék, amely segít a gyerekeknek játékosan elsajátítani a szorzótáblát. Nincs szükség elemre, csak logikára!</p>
+                    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="price" content="6300">6.300</span> 
+                        <span itemprop="priceCurrency" content="HUF">Ft</span>
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </p>
+                    <button class="buy-button" onclick="openOrder('matek-majom')">Megrendelem</button>
+                </article>
 
-                <li>
-                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <img src="kepek/egyedi-keretes-fenykep-szublimacios-ajandek.jpg" 
+                         id="img-9" 
+                         class="product-image-main" 
+                         alt="Egyedi keretes fénykép szublimációs technológiával"
+                         loading="lazy"
+                         width="400" 
+                         height="300"
+                         onclick="openModal(this.src)">
+                    <div class="product-gallery">
                         <img src="kepek/egyedi-keretes-fenykep-szublimacios-ajandek.jpg" 
-                             id="img-9" 
-                             class="product-image-main" 
-                             alt="Egyedi keretes fénykép szublimációs technológiával"
+                             alt="Egyedi keretes fénykép - első nézet"
                              loading="lazy"
-                             width="400" 
-                             height="300"
-                             onclick="openModal(this.src)">
-                        <div class="product-gallery">
-                            <img src="kepek/egyedi-keretes-fenykep-szublimacios-ajandek.jpg" 
-                                 alt="Egyedi keretes fénykép - első nézet"
-                                 loading="lazy"
-                                 onclick="changeImage('img-9', this.src)">
-                            <img src="kepek/szemelyre-szabott-fenykepes-ajandek-keretben.jpg" 
-                                 alt="Egyedi keretes fénykép - második nézet"
-                                 loading="lazy"
-                                 onclick="changeImage('img-9', this.src)">
-                            <img src="kepek/szublimalt-egyedi-fotos-ajandektargy.jpg" 
-                                 alt="Egyedi keretes fénykép - harmadik nézet"
-                                 loading="lazy"
-                                 onclick="changeImage('img-9', this.src)">
-                        </div>
-                        <h3 itemprop="name">Egyedi keretes fénykép</h3>
-                        <p class="product-desc" itemprop="description">Speciális szublimációs technológiával készült, élénk színű és tartós fotó egyedi keretben. Örök emlék a legszebb pillanatoknak.</p>
-                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price" content="3500">3.500</span> 
-                            <span itemprop="priceCurrency" content="HUF">Ft</span>
-                            <meta itemprop="availability" content="https://schema.org/InStock">
-                        </p>
-                        <button class="buy-button" onclick="openOrder('keretes-fenykep')">Megrendelem</button>
-                    </article>
-                </li>
+                             onclick="changeImage('img-9', this.src)">
+                        <img src="kepek/szemelyre-szabott-fenykepes-ajandek-keretben.jpg" 
+                             alt="Egyedi keretes fénykép - második nézet"
+                             loading="lazy"
+                             onclick="changeImage('img-9', this.src)">
+                        <img src="kepek/szublimalt-egyedi-fotos-ajandektargy.jpg" 
+                             alt="Egyedi keretes fénykép - harmadik nézet"
+                             loading="lazy"
+                             onclick="changeImage('img-9', this.src)">
+                    </div>
+                    <h3 itemprop="name">Egyedi keretes fénykép</h3>
+                    <p class="product-desc" itemprop="description">Speciális szublimációs technológiával készült, élénk színű és tartós fotó egyedi keretben. Örök emlék a legszebb pillanatoknak.</p>
+                    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="price" content="3500">3.500</span> 
+                        <span itemprop="priceCurrency" content="HUF">Ft</span>
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </p>
+                    <button class="buy-button" onclick="openOrder('keretes-fenykep')">Megrendelem</button>
+                </article>
 
-                <li>
-                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <img src="kepek/gyedi-gravirozott-fa-soroshordo-ajandek-ferfiaknak.jpg" 
+                         id="img-8" 
+                         class="product-image-main" 
+                         alt="Egyedi gravírozott fa söröshordó ajándék férfiaknak"
+                         loading="lazy"
+                         width="400" 
+                         height="300"
+                         onclick="openModal(this.src)">
+                    <div class="product-gallery">
                         <img src="kepek/gyedi-gravirozott-fa-soroshordo-ajandek-ferfiaknak.jpg" 
-                             id="img-8" 
-                             class="product-image-main" 
-                             alt="Egyedi gravírozott fa söröshordó ajándék férfiaknak"
+                             alt="Gravírozott söröshordó - első nézet"
                              loading="lazy"
-                             width="400" 
-                             height="300"
-                             onclick="openModal(this.src)">
-                        <div class="product-gallery">
-                            <img src="kepek/gyedi-gravirozott-fa-soroshordo-ajandek-ferfiaknak.jpg" 
-                                 alt="Gravírozott söröshordó - első nézet"
-                                 loading="lazy"
-                                 onclick="changeImage('img-8', this.src)">
-                            <img src="kepek/fa-sor-tarto-hordo-6-darabos-kiszereles.jpg" 
-                                 alt="Gravírozott söröshordó - 6 darabos kiszerelés"
-                                 loading="lazy"
-                                 onclick="changeImage('img-8', this.src)">
-                            <img src="kepek/kezmuves-fa-soroshordo-szuletesnapi-ajandek.jpg" 
-                                 alt="Gravírozott söröshordó - születésnapi ajándék"
-                                 loading="lazy"
-                                 onclick="changeImage('img-8', this.src)">
-                        </div>
-                        <h3 itemprop="name">Egyedi Gravírozott Söröshordó</h3>
-                        <p class="product-desc" itemprop="description">Stílusos, fából készült hordó alakú tartó 6 darab 0,5l-es sörhöz. Kiváló ajándék születésnapra, egyedi gravírozással.</p>
-                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price" content="8900">8.900</span> 
-                            <span itemprop="priceCurrency" content="HUF">Ft</span>
-                            <meta itemprop="availability" content="https://schema.org/InStock">
-                        </p>
-                        <button class="buy-button" onclick="openOrder('soroshordo')">Megrendelem</button>
-                    </article>
-                </li>
-
-                <li>
-                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
-                        <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek.jpg" 
-                             id="img-7" 
-                             class="product-image-main" 
-                             alt="Fa örökrózsa Valentin-napi ajándék nőknek"
+                             onclick="changeImage('img-8', this.src)">
+                        <img src="kepek/fa-sor-tarto-hordo-6-darabos-kiszereles.jpg" 
+                             alt="Gravírozott söröshordó - 6 darabos kiszerelés"
                              loading="lazy"
-                             width="400" 
-                             height="300"
-                             onclick="openModal(this.src)">
-                        <h3 itemprop="name">Fa örökrózsa</h3>
-                        <p class="product-desc" itemprop="description">Elegáns, fából készült örökrózsa, amely soha nem hervad el. Tökéletes választás Valentin-napra.</p>
-                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price" content="2000">2.000</span> 
-                            <span itemprop="priceCurrency" content="HUF">Ft</span>
-                            <meta itemprop="availability" content="https://schema.org/InStock">
-                        </p>
-                        <button class="buy-button" onclick="openOrder('orokrozsa')">Megrendelem</button>
-                    </article>
-                </li>
-
-                <li>
-                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
-                        <img src="kepek/szuletes-karkoto-tarto-fa-ajandek.jpg" 
-                             id="img-1" 
-                             class="product-image-main" 
-                             alt="Születési karkötő tartó fa ajándék"
+                             onclick="changeImage('img-8', this.src)">
+                        <img src="kepek/kezmuves-fa-soroshordo-szuletesnapi-ajandek.jpg" 
+                             alt="Gravírozott söröshordó - születésnapi ajándék"
                              loading="lazy"
-                             width="400" 
-                             height="300"
-                             onclick="openModal(this.src)">
-                        <h3 itemprop="name">Születési karkötő tartó</h3>
-                        <p class="product-desc" itemprop="description">Őrizze meg gyermeke születésének legszebb emlékét ezzel az egyedi fatartóval.</p>
-                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price" content="4500">4.500</span> 
-                            <span itemprop="priceCurrency" content="HUF">Ft</span>
-                            <meta itemprop="availability" content="https://schema.org/InStock">
-                        </p>
-                        <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
-                    </article>
-                </li>
+                             onclick="changeImage('img-8', this.src)">
+                    </div>
+                    <h3 itemprop="name">Egyedi Gravírozott Söröshordó</h3>
+                    <p class="product-desc" itemprop="description">Stílusos, fából készült hordó alakú tartó 6 darab 0,5l-es sörhöz. Kiváló ajándék születésnapra, egyedi gravírozással.</p>
+                    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="price" content="8900">8.900</span> 
+                        <span itemprop="priceCurrency" content="HUF">Ft</span>
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </p>
+                    <button class="buy-button" onclick="openOrder('soroshordo')">Megrendelem</button>
+                </article>
 
-                <li>
-                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
-                        <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek.jpg" 
-                             id="img-3" 
-                             class="product-image-main" 
-                             alt="Egyedi fényképes fotókő palakő ajándék"
-                             loading="lazy"
-                             width="400" 
-                             height="300"
-                             onclick="openModal(this.src)">
-                        <h3 itemprop="name">Egyedi Fotókő</h3>
-                        <p class="product-desc" itemprop="description">Természetes palakőre nyomtatott fénykép, amely örök dísze lesz a lakásnak.</p>
-                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price" content="5900">5.900</span> 
-                            <span itemprop="priceCurrency" content="HUF">Ft</span>
-                            <meta itemprop="availability" content="https://schema.org/InStock">
-                        </p>
-                        <button class="buy-button" onclick="openOrder('fotoko')">Megrendelem</button>
-                    </article>
-                </li>
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <img src="kepek/fa-orokrozsa-valentin-napi-ajandek-noknek.jpg" 
+                         id="img-7" 
+                         class="product-image-main" 
+                         alt="Fa örökrózsa Valentin-napi ajándék nőknek"
+                         loading="lazy"
+                         width="400" 
+                         height="300"
+                         onclick="openModal(this.src)">
+                    <h3 itemprop="name">Fa örökrózsa</h3>
+                    <p class="product-desc" itemprop="description">Elegáns, fából készült örökrózsa, amely soha nem hervad el. Tökéletes választás Valentin-napra.</p>
+                    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="price" content="2000">2.000</span> 
+                        <span itemprop="priceCurrency" content="HUF">Ft</span>
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </p>
+                    <button class="buy-button" onclick="openOrder('orokrozsa')">Megrendelem</button>
+                </article>
 
-                <li>
-                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
-                        <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes.jpg" 
-                             id="img-2" 
-                             class="product-image-main" 
-                             alt="Egyedi esküvői köszönőajándék hűtőmágnes"
-                             loading="lazy"
-                             width="400" 
-                             height="300"
-                             onclick="openModal(this.src)">
-                        <h3 itemprop="name">Esküvői köszönőajándék</h3>
-                        <p class="product-desc" itemprop="description">Egyedi esküvői köszönőajándék hűtőmágnes formájában. Tökéletes emlék a nagy napról vendégeidnek.</p>
-                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span>Kérjen árat</span>
-                            <meta itemprop="availability" content="https://schema.org/InStock">
-                        </p>
-                        <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
-                    </article>
-                </li>
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <img src="kepek/szuletes-karkoto-tarto-fa-ajandek.jpg" 
+                         id="img-1" 
+                         class="product-image-main" 
+                         alt="Születési karkötő tartó fa ajándék"
+                         loading="lazy"
+                         width="400" 
+                         height="300"
+                         onclick="openModal(this.src)">
+                    <h3 itemprop="name">Születési karkötő tartó</h3>
+                    <p class="product-desc" itemprop="description">Őrizze meg gyermeke születésének legszebb emlékét ezzel az egyedi fatartóval.</p>
+                    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="price" content="4500">4.500</span> 
+                        <span itemprop="priceCurrency" content="HUF">Ft</span>
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </p>
+                    <button class="buy-button" onclick="openOrder('karkoto-tarto')">Megrendelem</button>
+                </article>
 
-                <li>
-                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
-                        <img src="kepek/grinch-karacsonyi-led-lampa-vilagitas.jpg" 
-                             id="img-4" 
-                             class="product-image-main" 
-                             alt="Grinch karácsonyi LED lámpa világítás"
-                             loading="lazy"
-                             width="400" 
-                             height="300"
-                             onclick="openModal(this.src)">
-                        <h3 itemprop="name">Grinch LED lámpa</h3>
-                        <p class="product-desc" itemprop="description">Karácsonyi hangulatú Grinch LED lámpa, amely meghitté varázsolja az otthonodat az ünnepek alatt.</p>
-                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price" content="4900">4.900</span> 
-                            <span itemprop="priceCurrency" content="HUF">Ft</span>
-                            <meta itemprop="availability" content="https://schema.org/InStock">
-                        </p>
-                        <button class="buy-button" onclick="openOrder('grinch-lampa')">Megrendelem</button>
-                    </article>
-                </li>
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <img src="kepek/egyedi-fenykepes-fotoko-palako-ajandek.jpg" 
+                         id="img-3" 
+                         class="product-image-main" 
+                         alt="Egyedi fényképes fotókő palakő ajándék"
+                         loading="lazy"
+                         width="400" 
+                         height="300"
+                         onclick="openModal(this.src)">
+                    <h3 itemprop="name">Egyedi Fotókő</h3>
+                    <p class="product-desc" itemprop="description">Természetes palakőre nyomtatott fénykép, amely örök dísze lesz a lakásnak.</p>
+                    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="price" content="5900">5.900</span> 
+                        <span itemprop="priceCurrency" content="HUF">Ft</span>
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </p>
+                    <button class="buy-button" onclick="openOrder('fotoko')">Megrendelem</button>
+                </article>
 
-                <li>
-                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
-                        <img src="kepek/renszarvas-led-lampa-karacsonyi-dekoracio.jpg" 
-                             id="img-5" 
-                             class="product-image-main" 
-                             alt="Rénszarvas LED lámpa karácsonyi dekoráció"
-                             loading="lazy"
-                             width="400" 
-                             height="300"
-                             onclick="openModal(this.src)">
-                        <h3 itemprop="name">Rénszarvas LED lámpa</h3>
-                        <p class="product-desc" itemprop="description">Aranyos rénszarvas formájú LED lámpa, tökéletes karácsonyi dekoráció gyerekszobába vagy nappaliba.</p>
-                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span itemprop="price" content="4900">4.900</span> 
-                            <span itemprop="priceCurrency" content="HUF">Ft</span>
-                            <meta itemprop="availability" content="https://schema.org/InStock">
-                        </p>
-                        <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
-                    </article>
-                </li>
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <img src="kepek/egyedi-eskuvoi-koszonto-ajandek-huto-magnes.jpg" 
+                         id="img-2" 
+                         class="product-image-main" 
+                         alt="Egyedi esküvői köszönőajándék hűtőmágnes"
+                         loading="lazy"
+                         width="400" 
+                         height="300"
+                         onclick="openModal(this.src)">
+                    <h3 itemprop="name">Esküvői köszönőajándék</h3>
+                    <p class="product-desc" itemprop="description">Egyedi esküvői köszönőajándék hűtőmágnes formájában. Tökéletes emlék a nagy napról vendégeidnek.</p>
+                    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span>Kérjen árat</span>
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </p>
+                    <button class="buy-button" onclick="openOrder('koszonto-ajandek')">Megrendelem</button>
+                </article>
 
-                <li>
-                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
-                        <img src="kepek/gyerek-jutalompont-gyujto-tablazat-fabol.jpg" 
-                             id="img-6" 
-                             class="product-image-main" 
-                             alt="Gyerek jutalompont gyűjtő táblázat fából"
-                             loading="lazy"
-                             width="400" 
-                             height="300"
-                             onclick="openModal(this.src)">
-                        <h3 itemprop="name">Jutalompont rendszer</h3>
-                        <p class="product-desc" itemprop="description">Fa jutalompont gyűjtő táblázat gyerekeknek. Motiválja a gyerkőcöket játékosan a feladatok elvégzésére.</p>
-                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                            <span>Kérjen árat</span>
-                            <meta itemprop="availability" content="https://schema.org/InStock">
-                        </p>
-                        <button class="buy-button" onclick="openOrder('jutalompont')">Megrendelem</button>
-                    </article>
-                </li>
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <img src="kepek/grinch-karacsonyi-led-lampa-vilagitas.jpg" 
+                         id="img-4" 
+                         class="product-image-main" 
+                         alt="Grinch karácsonyi LED lámpa világítás"
+                         loading="lazy"
+                         width="400" 
+                         height="300"
+                         onclick="openModal(this.src)">
+                    <h3 itemprop="name">Grinch LED lámpa</h3>
+                    <p class="product-desc" itemprop="description">Karácsonyi hangulatú Grinch LED lámpa, amely meghitté varázsolja az otthonodat az ünnepek alatt.</p>
+                    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="price" content="4900">4.900</span> 
+                        <span itemprop="priceCurrency" content="HUF">Ft</span>
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </p>
+                    <button class="buy-button" onclick="openOrder('grinch-lampa')">Megrendelem</button>
+                </article>
 
-            </ul>
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <img src="kepek/renszarvas-led-lampa-karacsonyi-dekoracio.jpg" 
+                         id="img-5" 
+                         class="product-image-main" 
+                         alt="Rénszarvas LED lámpa karácsonyi dekoráció"
+                         loading="lazy"
+                         width="400" 
+                         height="300"
+                         onclick="openModal(this.src)">
+                    <h3 itemprop="name">Rénszarvas LED lámpa</h3>
+                    <p class="product-desc" itemprop="description">Aranyos rénszarvas formájú LED lámpa, tökéletes karácsonyi dekoráció gyerekszobába vagy nappaliba.</p>
+                    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span itemprop="price" content="4900">4.900</span> 
+                        <span itemprop="priceCurrency" content="HUF">Ft</span>
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </p>
+                    <button class="buy-button" onclick="openOrder('szarvas-lampa')">Megrendelem</button>
+                </article>
+
+                <article class="product-card" itemscope itemtype="https://schema.org/Product">
+                    <img src="kepek/gyerek-jutalompont-gyujto-tablazat-fabol.jpg" 
+                         id="img-6" 
+                         class="product-image-main" 
+                         alt="Gyerek jutalompont gyűjtő táblázat fából"
+                         loading="lazy"
+                         width="400" 
+                         height="300"
+                         onclick="openModal(this.src)">
+                    <h3 itemprop="name">Jutalompont rendszer</h3>
+                    <p class="product-desc" itemprop="description">Fa jutalompont gyűjtő táblázat gyerekeknek. Motiválja a gyerkőcöket játékosan a feladatok elvégzésére.</p>
+                    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <span>Kérjen árat</span>
+                        <meta itemprop="availability" content="https://schema.org/InStock">
+                    </p>
+                    <button class="buy-button" onclick="openOrder('jutalompont')">Megrendelem</button>
+                </article>
+
+            </div>
         </section>
     </main>
 
-    <div id="imageModal" class="modal" role="dialog" aria-label="Kép nagyítva" aria-hidden="true">
-        <button class="close-modal" onclick="closeModal()" aria-label="Bezárás">&times;</button>
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
         <img id="modalImg" alt="Nagyított termékkép">
     </div>
 
-    <div id="orderModal" class="modal" role="dialog" aria-label="Megrendelés" aria-hidden="true">
+    <div id="orderModal" class="modal">
         <div class="order-content">
-            <button class="close-modal" onclick="closeOrder()" aria-label="Bezárás">&times;</button>
+            <span class="close-modal" onclick="closeOrder()">&times;</span>
             <h2>Megrendelés</h2>
             <form action="https://formspree.io/f/meeeqoyj" method="POST" class="order-form">
                 <label for="productSelect">Válasszon terméket:</label>
@@ -336,11 +316,8 @@
     </div>
 
     <footer>
-        <div itemscope itemtype="https://schema.org/LocalBusiness">
-            <p>&copy; 2026 <span itemprop="name">Kreatívlenyomat</span></p>
-            <p class="footer-tagline">Személyre szabott ajándékok - <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressLocality">Polgár</span></span></p>
-            <meta itemprop="priceRange" content="$$">
-        </div>
+        <p>&copy; 2026 Kreatívlenyomat</p>
+        <p class="footer-tagline">Személyre szabott ajándékok - Polgár</p>
     </footer>
 
     <script>
@@ -348,7 +325,6 @@
             const img = document.getElementById(id);
             if (img) {
                 img.src = src;
-                img.alt = event.target.alt || 'Termékkép';
             }
         }
 
@@ -358,7 +334,6 @@
             if (modal && modalImg) {
                 modalImg.src = src;
                 modal.style.display = "flex";
-                modal.setAttribute("aria-hidden", "false");
                 document.body.style.overflow = "hidden";
             }
         }
@@ -367,7 +342,6 @@
             const modal = document.getElementById("imageModal");
             if (modal) {
                 modal.style.display = "none";
-                modal.setAttribute("aria-hidden", "true");
                 document.body.style.overflow = "";
             }
         }
@@ -378,7 +352,6 @@
             if (modal && select) {
                 select.value = val;
                 modal.style.display = "flex";
-                modal.setAttribute("aria-hidden", "false");
                 document.body.style.overflow = "hidden";
             }
         }
@@ -387,7 +360,6 @@
             const modal = document.getElementById("orderModal");
             if (modal) {
                 modal.style.display = "none";
-                modal.setAttribute("aria-hidden", "true");
                 document.body.style.overflow = "";
             }
         }
